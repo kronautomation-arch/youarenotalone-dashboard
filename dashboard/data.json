@@ -1,0 +1,116 @@
+{
+  "updated_at": "2026-05-08T00:21:36+02:00",
+  "currency": "EUR",
+  "locale": "es-ES",
+  "timezone": "Europe/Madrid",
+  "errors": {
+    "shopify": null,
+    "meta": null,
+    "seo": null
+  },
+  "config": {
+    "marca": "Youarenotalone",
+    "pais": "España",
+    "ticket_promedio": 0,
+    "fuente_primaria": "shopify"
+  },
+  "shopify": {
+    "ventas_brutas_ytd": 0.0,
+    "ventas_netas_ytd": 0.0,
+    "descuentos_ytd": 0.0,
+    "unidades_ytd": 0,
+    "ordenes_ytd": 0,
+    "canceladas": {
+      "ordenes": 0,
+      "monto": 0.0
+    },
+    "reembolsadas": {
+      "ordenes": 0,
+      "monto": 0.0
+    },
+    "no_pagadas": {
+      "ordenes": 0,
+      "monto": 0.0,
+      "nota": null
+    },
+    "top_productos": [],
+    "top_skus": [],
+    "canales": [],
+    "codigos_descuento": []
+  },
+  "meta": {
+    "gasto_total_ytd": 0.0,
+    "purchases_total_ytd": 0,
+    "cpa": 0.0,
+    "cuentas": [
+      {
+        "nombre": "Cuenta 01",
+        "account_id": "act_26824778487134439",
+        "gasto": 0.0,
+        "impressions": 0,
+        "clicks": 0,
+        "purchases": 0,
+        "cpa": 0.0,
+        "reach": 0,
+        "frequency": 0.0,
+        "ctr": 0.0,
+        "cpm": 0.0,
+        "currency": "COP"
+      }
+    ],
+    "agregado_ytd": {
+      "impressions": 0,
+      "reach": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "cpm": 0.0,
+      "frequency": 0,
+      "cpc": 0.0
+    },
+    "currency_conversion": {
+      "from": "COP",
+      "to": "EUR",
+      "method": "daily_historical_rates",
+      "avg_rate": 0.00023222,
+      "source": "fawazahmed0/exchange-api"
+    }
+  },
+  "kpis_negocio": {
+    "roas_ytd": 0,
+    "ticket_promedio": 0,
+    "tasa_descuento": 0,
+    "unidades_por_orden": 0
+  },
+  "daily": {},
+  "seo": null,
+  "logros": {
+    "hoy": {
+      "alcance": [],
+      "ventas": [],
+      "eficiencia": [],
+      "seo": [],
+      "all": []
+    },
+    "semana": {
+      "alcance": [],
+      "ventas": [],
+      "eficiencia": [],
+      "seo": [],
+      "all": []
+    },
+    "mes": {
+      "alcance": [],
+      "ventas": [],
+      "eficiencia": [],
+      "seo": [],
+      "all": []
+    },
+    "ytd": {
+      "alcance": [],
+      "ventas": [],
+      "eficiencia": [],
+      "seo": [],
+      "all": []
+    }
+  }
+}

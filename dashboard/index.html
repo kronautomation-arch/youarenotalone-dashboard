@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Yana" />
+  <title>Youarenotalone</title>
+  <meta name="theme-color" content="#080c18" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth.js"></script>
+  <script>
+    // En localhost saltamos auth (modo desarrollo)
+    if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
+      requireAuth('youarenotalone');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg:      #080c18;
+      --bg2:     #0d1120;
+      --glass:   rgba(255,255,255,0.04);
+      --glass2:  rgba(255,255,255,0.07);
+      --border:  rgba(255,255,255,0.08);
+      --border2: rgba(255,255,255,0.14);
+
+      --p1: #7c3aed; --p2: #a855f7;
+      --b1: #1d4ed8; --b2: #60a5fa;
+      --g1: #059669; --g2: #34d399;
+      --r1: #be123c; --r2: #fb7185;
+      --a1: #d97706; --a2: #fbbf24;
+      --c1: #0891b2; --c2: #67e8f9;
+
+      --txt:  #f1f5f9;
+      --txt2: #94a3b8;
+      --txt3: #475569;
+
+      --safe-top:    env(safe-area-inset-top, 44px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --r: 22px; --rs: 16px; --rx: 12px;
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+    html { scroll-behavior:smooth; }
+    body {
+      background: var(--bg); color: var(--txt);
+      font-family: -apple-system,'SF Pro Display',BlinkMacSystemFont,'Segoe UI',sans-serif;
+      min-height: 100dvh;
+      padding-bottom: calc(40px + var(--safe-bottom));
+      overscroll-behavior: none;
+    }
+
+    /* Hero header */
+    .hero-header { position:relative; overflow:hidden; padding: calc(var(--safe-top) + 14px) 20px 24px; }
+    .hero-header::before {
+      content:''; position:absolute; inset:0;
+      background: linear-gradient(150deg, #1c0a40 0%, #0d1535 55%, var(--bg) 100%);
+      z-index:0;
+    }
+    .orb { position:absolute; border-radius:50%; pointer-events:none; z-index:0; }
+    .orb-a { width:280px; height:280px; background: radial-gradient(circle, rgba(124,58,237,.32) 0%, transparent 68%); top:-100px; right:-70px; }
+    .orb-b { width:180px; height:180px; background: radial-gradient(circle, rgba(168,85,247,.18) 0%, transparent 68%); bottom:-60px; left:10px; }
+    .orb-c { width:100px; height:100px; background: radial-gradient(circle, rgba(99,102,241,.25) 0%, transparent 68%); top:40%; right:30%; }
+
+    .hdr-row1 { position:relative; z-index:1; display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+    .avatar { flex-shrink:0; display:flex; align-items:center; }
+    .avatar-fallback {
+      width:48px; height:48px; border-radius:14px;
+      background: linear-gradient(135deg, var(--p1), var(--p2));
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900; color:#fff; letter-spacing:-1px;
+      box-shadow:0 6px 18px rgba(124,58,237,.4);
+    }
+    .avatar img { height:48px; width:auto; object-fit:contain; }
+    .hdr-meta { flex:1; }
+    .hdr-greeting { font-size:11px; color:var(--txt2); font-weight:500; letter-spacing:.3px; }
+    .hdr-name { font-size:18px; font-weight:800; color:var(--txt); letter-spacing:-.5px; }
+    .live-badge {
+      display:flex; align-items:center; gap:6px;
+      background: rgba(5,150,105,.14); border:1px solid rgba(5,150,105,.3);
+      border-radius:99px; padding:6px 12px;
+      font-size:11px; font-weight:700; color:var(--g2); flex-shrink:0;
+    }
+    .live-dot { width:7px; height:7px; border-radius:50%; background:var(--g2); animation: ping 2.2s ease infinite; }
+    @keyframes ping { 0%{box-shadow:0 0 0 0 rgba(52,211,153,.7);} 70%{box-shadow:0 0 0 9px rgba(52,211,153,0);} 100%{box-shadow:0 0 0 0 rgba(52,211,153,0);} }
+
+    .hdr-date { position:relative; z-index:1; font-size:12px; color:var(--txt2); margin-bottom:2px; }
+    .hdr-updated { position:relative; z-index:1; font-size:10px; color:var(--txt3); margin-bottom:18px; }
+
+    .tab-pills { position:relative; z-index:1; display:flex; gap:6px; flex-wrap:wrap; }
+    .tab-pill {
+      display:flex; align-items:center; gap:5px;
+      padding:8px 14px; border-radius:11px;
+      font-size:12px; font-weight:700;
+      color:var(--txt2); background:var(--glass); border:1px solid var(--border);
+      cursor:pointer; transition:all .22s;
+    }
+    .tab-pill.active { background:rgba(124,58,237,.18); border-color:rgba(124,58,237,.4); color:var(--p2); }
+
+    /* Filter bar */
+    .filter-bar {
+      position:sticky; top:0; z-index:60;
+      background: rgba(8,12,24,.88);
+      backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+      padding:10px 16px;
+      display:flex; align-items:center; gap:6px;
+      overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+    }
+    .filter-bar::-webkit-scrollbar { display:none; }
+    .fb-btn {
+      flex-shrink:0; padding:7px 14px; border-radius:9px;
+      font-size:12px; font-weight:700; color:var(--txt2);
+      background: rgba(255,255,255,.05); border:1px solid var(--border);
+      cursor:pointer; transition:all .2s; white-space:nowrap;
+    }
+    .fb-btn.active { background: var(--p1); color:#fff; border-color:transparent; box-shadow:0 3px 12px rgba(124,58,237,.4); }
+
+    /* Page wrapper */
+    .page { display:none; padding:20px 20px 0; }
+    .page.active { display:block; animation: slideUp .28s cubic-bezier(.16,1,.3,1); }
+    @keyframes slideUp { from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+
+    /* Revenue hero */
+    .rev-card {
+      position:relative; overflow:hidden;
+      background: linear-gradient(135deg, rgba(124,58,237,.22) 0%, rgba(168,85,247,.1) 60%, rgba(99,102,241,.05) 100%);
+      border:1px solid rgba(124,58,237,.3);
+      border-radius: var(--r); padding:22px; margin-bottom:14px;
+      backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+    }
+    .rev-card::after {
+      content:''; position:absolute; top:-70px; right:-50px;
+      width:180px; height:180px; border-radius:50%;
+      background: radial-gradient(circle, rgba(168,85,247,.2) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .rev-eyebrow { font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--p2); margin-bottom:6px; position:relative; z-index:1; }
+    .rev-amount { font-size:42px; font-weight:900; letter-spacing:-2px; line-height:1; color:var(--txt); margin-bottom:5px; position:relative; z-index:1; }
+    .rev-caption { font-size:12px; color:var(--txt2); margin-bottom:18px; position:relative; z-index:1; }
+    .rev-pills { display:flex; gap:8px; flex-wrap:wrap; position:relative; z-index:1; }
+    .rev-pill {
+      background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12);
+      border-radius:11px; padding:9px 14px;
+      backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    }
+    .rev-pill-val { font-size:17px; font-weight:800; color:var(--txt); letter-spacing:-.5px; }
+    .rev-pill-lbl { font-size:9px; color:var(--txt2); font-weight:600; text-transform:uppercase; letter-spacing:.5px; margin-top:2px; }
+
+    /* Quick links chips */
+    .quick-links { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+    .ql-chip {
+      flex:1; min-width:90px; padding:14px 12px; border-radius:14px;
+      background: var(--glass); border:1px solid var(--border);
+      cursor:pointer; transition:all .14s; text-align:center;
+      backdrop-filter:blur(12px);
+    }
+    .ql-chip:active { transform:scale(.97); background: var(--glass2); }
+    .ql-chip-icon { font-size:20px; margin-bottom:4px; }
+    .ql-chip-label { font-size:11px; font-weight:700; color:var(--txt); }
+    .ql-chip-sub { font-size:10px; color:var(--txt2); margin-top:1px; }
+
+    /* Section label */
+    .sec-lbl { font-size:10px; font-weight:700; letter-spacing:.9px; text-transform:uppercase; color:var(--txt3); margin: 8px 0 10px; }
+
+    /* KPI Grid */
+    .kpi-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px; }
+    .kpi-grid.three { grid-template-columns: repeat(3, 1fr); }
+    @media(max-width:520px){ .kpi-grid.three{ grid-template-columns:1fr 1fr; } }
+    .kpi-card {
+      background:var(--glass); border:1px solid var(--border);
+      border-radius:var(--rs); padding:16px;
+      backdrop-filter:blur(16px); position:relative; overflow:hidden;
+    }
+    .kpi-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      border-radius:var(--rs) var(--rs) 0 0;
+    }
+    .kpi-card.kp::before { background:linear-gradient(90deg,var(--p1),var(--p2)); }
+    .kpi-card.kb::before { background:linear-gradient(90deg,var(--b1),var(--b2)); }
+    .kpi-card.kg::before { background:linear-gradient(90deg,var(--g1),var(--g2)); }
+    .kpi-card.kr::before { background:linear-gradient(90deg,var(--r1),var(--r2)); }
+    .kpi-card.ka::before { background:linear-gradient(90deg,var(--a1),var(--a2)); }
+    .kpi-card.kc::before { background:linear-gradient(90deg,var(--c1),var(--c2)); }
+
+    .kpi-icon {
+      width:38px; height:38px; border-radius:11px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:18px; margin-bottom:12px;
+    }
+    .icon-p { background:linear-gradient(135deg,var(--p1),var(--p2)); box-shadow:0 4px 14px rgba(124,58,237,.38); }
+    .icon-b { background:linear-gradient(135deg,var(--b1),var(--b2)); box-shadow:0 4px 14px rgba(29,78,216,.38); }
+    .icon-g { background:linear-gradient(135deg,var(--g1),var(--g2)); box-shadow:0 4px 14px rgba(5,150,105,.38); }
+    .icon-r { background:linear-gradient(135deg,var(--r1),var(--r2)); box-shadow:0 4px 14px rgba(190,18,60,.38); }
+    .icon-a { background:linear-gradient(135deg,var(--a1),var(--a2)); box-shadow:0 4px 14px rgba(217,119,6,.38); }
+    .icon-c { background:linear-gradient(135deg,var(--c1),var(--c2)); box-shadow:0 4px 14px rgba(8,145,178,.38); }
+
+    .kpi-lbl { font-size:10px; color:var(--txt3); font-weight:600; letter-spacing:.1px; margin-bottom:5px; }
+    .kpi-val { font-size:21px; font-weight:900; color:var(--txt); letter-spacing:-1px; margin-bottom:4px; }
+    .kpi-sub { font-size:10px; color:var(--txt3); font-weight:500; }
+
+    /* Charts */
+    .chart-card {
+      background:var(--glass); border:1px solid var(--border);
+      border-radius:var(--rs); padding:16px; margin-bottom:14px;
+      backdrop-filter:blur(16px);
+    }
+    .chart-canvas-wrap { position:relative; height:200px; width:100%; }
+    .chart-canvas-wrap canvas { position:absolute; inset:0; }
+    .chart-hdr { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:14px; }
+    .chart-title-txt { font-size:13px; font-weight:700; color:var(--txt); }
+    .chart-sub-txt { font-size:10px; color:var(--txt2); margin-top:2px; }
+
+    /* Tables */
+    .data-card {
+      background:var(--glass); border:1px solid var(--border);
+      border-radius:var(--rs); padding:16px; margin-bottom:14px;
+      backdrop-filter:blur(16px);
+    }
+    .data-card-title { font-size:13px; font-weight:700; color:var(--txt); margin-bottom:12px; }
+    .data-table { width:100%; border-collapse: collapse; font-size:12px; }
+    .data-table th, .data-table td { padding:8px 6px; border-bottom:1px solid var(--border); text-align:left; }
+    .data-table th { color:var(--txt3); font-weight:600; font-size:10px; letter-spacing:.6px; text-transform:uppercase; }
+    .data-table td { color:var(--txt); }
+    .data-table td.num { text-align:right; font-variant-numeric: tabular-nums; }
+    .data-table tr:last-child td { border-bottom:none; }
+    .data-empty { font-size:11px; color:var(--txt3); font-style:italic; padding:12px 0; text-align:center; }
+
+    /* Conclusiones / Logros */
+    .concl-card {
+      background: linear-gradient(135deg, rgba(124,58,237,.09) 0%, rgba(0,0,0,0) 100%);
+      border:1px solid rgba(124,58,237,.22);
+      border-radius:var(--rs); padding:18px; margin-bottom:14px;
+      backdrop-filter:blur(16px);
+    }
+    .concl-title { font-size:13px; font-weight:700; color:var(--p2); margin-bottom:13px; display:flex; align-items:center; gap:7px; }
+    .concl-body { display:flex; flex-direction:column; gap:10px; }
+    .concl-item {
+      font-size:13px; line-height:1.65; color:var(--txt);
+      padding:11px 13px;
+      background:rgba(255,255,255,.04); border-radius:10px;
+      border-left:2px solid rgba(168,85,247,.45);
+    }
+    .concl-empty { font-size:11px; color:var(--txt3); font-style:italic; }
+
+    /* Ads grid */
+    .ads-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:10px; }
+    .ad-card {
+      background:rgba(255,255,255,.04); border:1px solid var(--border);
+      border-radius:12px; padding:14px;
+    }
+    .ad-name { font-size:11px; font-weight:700; color:var(--txt2); margin-bottom:8px; letter-spacing:.4px; text-transform:uppercase; }
+    .ad-spend { font-size:18px; font-weight:800; color:var(--txt); letter-spacing:-.5px; }
+    .ad-meta { font-size:10px; color:var(--txt3); margin-top:6px; }
+
+    /* SEO specific */
+    .seo-bar-row { display:flex; align-items:center; gap:8px; margin: 6px 0; }
+    .seo-bar-label { width:64px; font-size:10px; color:var(--txt3); }
+    .seo-bar-track { flex:1; height:7px; background: rgba(255,255,255,.06); border-radius:4px; overflow:hidden; }
+    .seo-bar-fill { height:100%; background: linear-gradient(90deg, var(--p1), var(--p2)); border-radius:4px; }
+    .seo-bar-count { width:32px; text-align:right; font-size:11px; font-weight:700; color:var(--txt); }
+    .score-pill { display:inline-block; padding:2px 8px; border-radius:10px; font-size:11px; font-weight:700; }
+    .score-high { background:rgba(34,197,94,.15); color:var(--g2); }
+    .score-mid  { background:rgba(234,179,8,.18); color:var(--a2); }
+    .score-low  { background:rgba(239,68,68,.15); color:var(--r2); }
+
+    .proj-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    @media(max-width:600px){ .proj-grid { grid-template-columns:1fr; } }
+    .proj-card {
+      background: rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      border-radius:12px; padding:14px;
+    }
+    .proj-card.optimist { border-color: rgba(52,211,153,.35); background: rgba(52,211,153,.04); }
+    .proj-name { font-size:10px; font-weight:700; letter-spacing:1px; color:var(--txt3); text-transform:uppercase; }
+    .proj-revenue { font-size:22px; font-weight:800; color:var(--g2); margin:6px 0 2px; letter-spacing:-.5px; }
+    .proj-row { display:flex; justify-content:space-between; font-size:11px; padding:3px 0; color:var(--txt2); }
+    .proj-row b { color:var(--txt); font-weight:700; }
+    .proj-tf { font-size:10px; color:var(--txt3); margin-top:8px; }
+
+    .achievements-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-top:14px; padding-top:14px; border-top:1px solid var(--border); }
+    .ach-card { background:rgba(255,255,255,.04); padding:10px 12px; border-radius:10px; }
+    .ach-icon { font-size:18px; margin-bottom:2px; }
+    .ach-count { font-size:22px; font-weight:800; color:var(--txt); line-height:1.1; }
+    .ach-label { font-size:10px; color:var(--txt3); letter-spacing:.4px; line-height:1.3; margin-top:2px; }
+
+    /* Logros tab */
+    .group-section { margin-bottom: 18px; }
+    .group-header {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 14px; background: var(--glass); border:1px solid var(--border);
+      border-radius:14px 14px 0 0; cursor:pointer;
+    }
+    .group-title { font-size:13px; font-weight:700; color:var(--txt); display:flex; align-items:center; gap:8px; }
+    .group-count { font-size:11px; color:var(--txt2); padding:3px 9px; border-radius:99px; background:rgba(255,255,255,.05); border:1px solid var(--border); }
+    .group-body {
+      background: rgba(255,255,255,.02); border:1px solid var(--border);
+      border-top:none;
+      border-radius:0 0 14px 14px;
+      padding:12px 14px;
+      display:flex; flex-direction:column; gap:9px;
+    }
+
+    /* Loading / error */
+    .loading {
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      height:60vh; gap:18px;
+    }
+    .spinner { width:50px; height:50px; border:3px solid rgba(124,58,237,.2); border-top-color:var(--p1); border-radius:50%; animation:spin .85s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .loading-txt { font-size:13px; color:var(--txt2); font-weight:600; }
+    .error-box {
+      margin:20px;
+      background:rgba(190,18,60,.1); border:1px solid rgba(190,18,60,.28);
+      border-radius:var(--rs); padding:18px;
+      font-size:13px; color:var(--r2); line-height:1.5;
+    }
+    .empty-state {
+      background:var(--glass); border:1px dashed var(--border);
+      border-radius:var(--rs); padding:24px; text-align:center;
+      color:var(--txt2); font-size:12px; line-height:1.6;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO HEADER -->
+<div class="hero-header">
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="orb orb-c"></div>
+
+  <div class="hdr-row1">
+    <div class="avatar"><div class="avatar-fallback">Y</div></div>
+    <div class="hdr-meta">
+      <div class="hdr-greeting" id="greeting">Hola</div>
+      <div class="hdr-name">Youarenotalone</div>
+    </div>
+    <div class="live-badge">
+      <div class="live-dot"></div>
+      En vivo
+    </div>
+  </div>
+
+  <div class="hdr-date" id="hdr-date">—</div>
+  <div class="hdr-updated">Actualizado: <span id="updated-at">—</span></div>
+
+  <div class="tab-pills">
+    <button class="tab-pill active" data-tab="hoy" onclick="switchTab('hoy')">💜 Hoy</button>
+    <button class="tab-pill" data-tab="marketing" onclick="switchTab('marketing')">📢 Marketing</button>
+    <button class="tab-pill" data-tab="seo" onclick="switchTab('seo')">🔎 SEO</button>
+    <button class="tab-pill" data-tab="logros" onclick="switchTab('logros')">🌟 Logros</button>
+  </div>
+</div>
+
+<!-- FILTER BAR (visible solo en Marketing y Logros — SEO solo muestra global) -->
+<div class="filter-bar" id="filter-bar" style="display:none">
+  <button class="fb-btn active" data-period="hoy"      onclick="switchPeriod('hoy')">Hoy</button>
+  <button class="fb-btn"        data-period="semana"   onclick="switchPeriod('semana')">Esta semana</button>
+  <button class="fb-btn"        data-period="mes"      onclick="switchPeriod('mes')">Este mes</button>
+  <button class="fb-btn"        data-period="ytd"      onclick="switchPeriod('ytd')">Este año</button>
+</div>
+
+<!-- LOADING -->
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <div class="loading-txt">Cargando métricas…</div>
+</div>
+
+<div id="error-container"></div>
+
+<!-- APP -->
+<div id="app" style="display:none">
+
+  <!-- ─── PAGE: HOY ─── -->
+  <div class="page active" id="page-hoy">
+    <div class="rev-card">
+      <div class="rev-eyebrow">💜 Ventas hoy</div>
+      <div class="rev-amount" id="hoy-ventas">0 €</div>
+      <div class="rev-caption" id="hoy-caption">—</div>
+      <div class="rev-pills">
+        <div class="rev-pill"><div class="rev-pill-val" id="hoy-unidades">0</div><div class="rev-pill-lbl">Prendas</div></div>
+        <div class="rev-pill"><div class="rev-pill-val" id="hoy-ordenes">0</div><div class="rev-pill-lbl">Pedidos</div></div>
+        <div class="rev-pill"><div class="rev-pill-val" id="hoy-reach">0</div><div class="rev-pill-lbl">Alcance</div></div>
+      </div>
+    </div>
+
+    <div class="quick-links">
+      <div class="ql-chip" onclick="switchTab('marketing')">
+        <div class="ql-chip-icon">📢</div>
+        <div class="ql-chip-label">Marketing</div>
+        <div class="ql-chip-sub" id="hoy-ql-mkt">—</div>
+      </div>
+      <div class="ql-chip" onclick="switchTab('seo')">
+        <div class="ql-chip-icon">🔎</div>
+        <div class="ql-chip-label">SEO</div>
+        <div class="ql-chip-sub" id="hoy-ql-seo">—</div>
+      </div>
+      <div class="ql-chip" onclick="switchTab('logros')">
+        <div class="ql-chip-icon">🌟</div>
+        <div class="ql-chip-label">Logros</div>
+        <div class="ql-chip-sub" id="hoy-ql-logros">—</div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-hdr">
+        <div>
+          <div class="chart-title-txt">Últimos 7 días</div>
+          <div class="chart-sub-txt">Ventas netas y gasto en publicidad</div>
+        </div>
+      </div>
+      <div class="chart-canvas-wrap"><canvas id="chart-7d"></canvas></div>
+    </div>
+
+    <div class="concl-card">
+      <div class="concl-title">💡 Lo que está pasando hoy</div>
+      <div class="concl-body" id="hoy-logros-body">
+        <div class="concl-empty">Cargando…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PAGE: MARKETING ─── -->
+  <div class="page" id="page-marketing">
+    <div class="sec-lbl">📢 Inversión y retorno · <span id="mkt-period-lbl">hoy</span></div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card kp"><div class="kpi-icon icon-p">💸</div><div class="kpi-lbl">Gasto Meta</div><div class="kpi-val" id="mkt-gasto">0 €</div><div class="kpi-sub" id="mkt-gasto-sub"></div></div>
+      <div class="kpi-card kb"><div class="kpi-icon icon-b">👁️</div><div class="kpi-lbl">Alcance</div><div class="kpi-val" id="mkt-reach">0</div><div class="kpi-sub" id="mkt-imp-sub"></div></div>
+      <div class="kpi-card kc"><div class="kpi-icon icon-c">🖱️</div><div class="kpi-lbl">Clics</div><div class="kpi-val" id="mkt-clicks">0</div><div class="kpi-sub" id="mkt-ctr-sub"></div></div>
+      <div class="kpi-card ka"><div class="kpi-icon icon-a">🎯</div><div class="kpi-lbl">CPA</div><div class="kpi-val" id="mkt-cpa">0 €</div><div class="kpi-sub" id="mkt-cpa-sub"></div></div>
+      <div class="kpi-card kg"><div class="kpi-icon icon-g">📈</div><div class="kpi-lbl">ROAS</div><div class="kpi-val" id="mkt-roas">0,0x</div><div class="kpi-sub" id="mkt-roas-sub"></div></div>
+      <div class="kpi-card kr"><div class="kpi-icon icon-r">🛍️</div><div class="kpi-lbl">Ventas netas</div><div class="kpi-val" id="mkt-ventas">0 €</div><div class="kpi-sub" id="mkt-ordenes-sub"></div></div>
+    </div>
+
+    <div class="data-card">
+      <div class="data-card-title">📊 Cuentas Meta Ads</div>
+      <div class="ads-grid" id="mkt-ads-grid"></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-hdr"><div><div class="chart-title-txt">Gasto vs Ventas diarias</div><div class="chart-sub-txt">YTD</div></div></div>
+      <div class="chart-canvas-wrap" style="height:240px"><canvas id="chart-mkt-vs"></canvas></div>
+    </div>
+
+    <div class="data-card">
+      <div class="data-card-title">👑 Top 10 productos</div>
+      <table class="data-table">
+        <thead><tr><th>Producto</th><th class="num">Unidades</th><th class="num">Ventas</th></tr></thead>
+        <tbody id="mkt-top-productos"><tr><td colspan="3" class="data-empty">—</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="data-card">
+      <div class="data-card-title">🛒 Canales de venta</div>
+      <table class="data-table">
+        <thead><tr><th>Canal</th><th class="num">Pedidos</th><th class="num">Ventas brutas</th></tr></thead>
+        <tbody id="mkt-canales"><tr><td colspan="3" class="data-empty">—</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="data-card">
+      <div class="data-card-title">🎟️ Códigos de descuento</div>
+      <table class="data-table">
+        <thead><tr><th>Código</th><th class="num">Usos</th><th class="num">Monto</th></tr></thead>
+        <tbody id="mkt-descuentos"><tr><td colspan="3" class="data-empty">—</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="concl-card">
+      <div class="concl-title">💡 Lectura del período</div>
+      <div class="concl-body" id="mkt-logros-body"><div class="concl-empty">Cargando…</div></div>
+    </div>
+  </div>
+
+  <!-- ─── PAGE: SEO ─── -->
+  <div class="page" id="page-seo">
+    <div class="sec-lbl">🔎 SEO · <span id="seo-domain">—</span></div>
+
+    <div id="seo-empty" class="empty-state" style="display:none">
+      ⚠️ <strong>SEO aún no configurado.</strong><br>
+      Activa la tienda en <code>seo-system/config/stores.json</code> y ejecuta<br>
+      <code>cd ../seo-system && python agent.py --store youarenotalone</code>
+    </div>
+
+    <div id="seo-content" style="display:none">
+      <div class="kpi-grid">
+        <div class="kpi-card kp"><div class="kpi-icon icon-p">📊</div><div class="kpi-lbl">Score blog</div><div class="kpi-val" id="seo-avg-score">—</div><div class="kpi-sub" id="seo-articles-sub">—</div></div>
+        <div class="kpi-card kg"><div class="kpi-icon icon-g">🔎</div><div class="kpi-lbl">Keywords ranking</div><div class="kpi-val" id="seo-rank-count">0</div><div class="kpi-sub" id="seo-rank-sub">—</div></div>
+        <div class="kpi-card kc"><div class="kpi-icon icon-c">🌱</div><div class="kpi-lbl">Oportunidades</div><div class="kpi-val" id="seo-opp-count">0</div><div class="kpi-sub" id="seo-opp-sub">—</div></div>
+        <div class="kpi-card ka"><div class="kpi-icon icon-a">🌐</div><div class="kpi-lbl">Visitas/mes</div><div class="kpi-val" id="seo-clicks">0</div><div class="kpi-sub">estimadas</div></div>
+      </div>
+
+      <div class="data-card" style="background: linear-gradient(135deg, rgba(124,58,237,.09), rgba(0,0,0,0)); border-color:rgba(124,58,237,.22)">
+        <div class="data-card-title" style="color:var(--p2)">📈 Progreso del trabajo SEO</div>
+        <div style="display:grid; grid-template-columns: auto 1fr; gap: 16px; align-items:center">
+          <div style="text-align:center; min-width:120px">
+            <div id="seo-improvement" style="font-size:42px; font-weight:900; color:var(--g2); line-height:1;">—</div>
+            <div style="font-size:10px; color:var(--txt3); letter-spacing:.6px; margin-top:4px">MEJORA SCORE</div>
+            <div id="seo-from-to" style="font-size:11px; margin-top:6px; color:var(--txt2)">—</div>
+          </div>
+          <div id="seo-evo-list" style="font-size:11px"></div>
+        </div>
+        <div class="achievements-grid" id="seo-achievements"></div>
+      </div>
+
+      <div class="data-card" style="border-color: rgba(52,211,153,.35)">
+        <div class="data-card-title" style="color:var(--g2)">🚀 Lo que podemos lograr</div>
+        <div id="seo-proj-summary" style="font-size:12px; color:var(--txt2); margin-bottom:12px"></div>
+        <div class="proj-grid" id="seo-projections"></div>
+        <div id="seo-proj-assumptions" style="font-size:11px; color:var(--txt3); margin-top:10px; padding-top:10px; border-top:1px solid var(--border)"></div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-title">📊 Distribución de score por blog</div>
+        <div id="seo-score-dist"></div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-title">🌱 Top oportunidades</div>
+        <table class="data-table">
+          <thead><tr><th>#</th><th>Keyword</th><th class="num">Volumen</th><th class="num">Dificultad</th></tr></thead>
+          <tbody id="seo-opps-table"><tr><td colspan="4" class="data-empty">—</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-title">🔎 Rankings actuales · Top 20</div>
+        <table class="data-table">
+          <thead><tr><th>Keyword</th><th class="num">Pos</th><th class="num">Volumen</th></tr></thead>
+          <tbody id="seo-rankings-table"><tr><td colspan="3" class="data-empty">—</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PAGE: LOGROS ─── -->
+  <div class="page" id="page-logros">
+    <div class="sec-lbl">🌟 Lo que está pasando · <span id="logros-period-lbl">hoy</span></div>
+
+    <div class="group-section">
+      <div class="group-header"><div class="group-title">💜 Alcance y marca</div><div class="group-count" id="g-alcance-count">0</div></div>
+      <div class="group-body" id="g-alcance"></div>
+    </div>
+    <div class="group-section">
+      <div class="group-header"><div class="group-title">🌟 Conversión y ventas</div><div class="group-count" id="g-ventas-count">0</div></div>
+      <div class="group-body" id="g-ventas"></div>
+    </div>
+    <div class="group-section">
+      <div class="group-header"><div class="group-title">📈 Eficiencia y finanzas</div><div class="group-count" id="g-eficiencia-count">0</div></div>
+      <div class="group-body" id="g-eficiencia"></div>
+    </div>
+    <div class="group-section">
+      <div class="group-header"><div class="group-title">🔎 SEO y contenido</div><div class="group-count" id="g-seo-count">0</div></div>
+      <div class="group-body" id="g-seo"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+'use strict';
+
+let RAW = null;
+let CURRENT_TAB = 'hoy';
+let CURRENT_PERIOD = 'hoy';
+let chart7d = null;
+let chartMktVs = null;
+
+const fmtEUR = (n, d = 0) => {
+  if (n == null || isNaN(n)) return '0 €';
+  return new Intl.NumberFormat('es-ES', { style:'currency', currency:'EUR', maximumFractionDigits: d, minimumFractionDigits: d }).format(n);
+};
+const fmtNum = (n) => {
+  if (n == null || isNaN(n)) return '0';
+  return new Intl.NumberFormat('es-ES').format(Math.round(n));
+};
+const fmtPct = (x, d = 1) => {
+  if (x == null || isNaN(x)) return '0%';
+  return new Intl.NumberFormat('es-ES', { minimumFractionDigits:d, maximumFractionDigits:d }).format(x) + '%';
+};
+const fmtDec = (x, d = 1) => {
+  if (x == null || isNaN(x)) return '0';
+  return new Intl.NumberFormat('es-ES', { minimumFractionDigits:d, maximumFractionDigits:d }).format(x);
+};
+
+function setGreeting() {
+  const h = new Date().getHours();
+  let g = 'Hola';
+  if (h < 12) g = 'Buenos días';
+  else if (h < 21) g = 'Buenas tardes';
+  else g = 'Buenas noches';
+  document.getElementById('greeting').textContent = g + ', equipo Yana';
+
+  const fechas = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const d = new Date();
+  document.getElementById('hdr-date').textContent =
+    `${fechas[d.getDay()]}, ${d.getDate()} de ${meses[d.getMonth()]}`;
+}
+
+function switchTab(tab) {
+  CURRENT_TAB = tab;
+  document.querySelectorAll('.tab-pill').forEach(p => p.classList.toggle('active', p.dataset.tab === tab));
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + tab).classList.add('active');
+
+  const showFilter = (tab === 'marketing' || tab === 'logros');
+  document.getElementById('filter-bar').style.display = showFilter ? 'flex' : 'none';
+
+  // Tab "hoy" siempre forzar period=hoy. SEO no usa period.
+  if (tab === 'hoy') CURRENT_PERIOD = 'hoy';
+
+  renderTab();
+}
+
+function switchPeriod(period) {
+  CURRENT_PERIOD = period;
+  document.querySelectorAll('.fb-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+  renderTab();
+}
+
+function renderTab() {
+  if (!RAW) return;
+  if (CURRENT_TAB === 'hoy') renderHoy();
+  else if (CURRENT_TAB === 'marketing') renderMarketing();
+  else if (CURRENT_TAB === 'seo') renderSeo();
+  else if (CURRENT_TAB === 'logros') renderLogros();
+}
+
+// Construye un agregado del período para Marketing/Logros, igual que el backend
+function aggregate(period) {
+  if (!RAW || !RAW.daily) return null;
+  const today = new Date();
+  let start;
+  const todayStr = isoDate(today);
+  if (period === 'hoy') start = todayStr;
+  else if (period === 'semana') {
+    const monday = new Date(today);
+    const dow = monday.getDay() || 7;
+    monday.setDate(monday.getDate() - (dow - 1));
+    start = isoDate(monday);
+  } else if (period === 'mes') {
+    start = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-01`;
+  } else { // ytd
+    start = `${today.getFullYear()}-01-01`;
+  }
+  const out = { ventas_netas:0, ventas_brutas:0, descuentos:0, unidades:0, ordenes:0,
+                meta_gasto:0, meta_purchases:0, meta_clicks:0, meta_impressions:0, meta_reach:0 };
+  for (const [fecha, d] of Object.entries(RAW.daily)) {
+    if (fecha >= start && fecha <= todayStr) {
+      for (const k of Object.keys(out)) out[k] += (d[k] || 0);
+    }
+  }
+  return out;
+}
+
+function isoDate(d) {
+  return d.toISOString().slice(0,10);
+}
+
+function periodLabel(p) {
+  return { hoy:'hoy', semana:'esta semana', mes:'este mes', ytd:'este año' }[p];
+}
+
+// ─── HOY ─────────────────────────────────────────────────────────────
+function renderHoy() {
+  const agg = aggregate('hoy');
+  if (!agg) return;
+  document.getElementById('hoy-ventas').textContent = fmtEUR(agg.ventas_netas);
+  document.getElementById('hoy-unidades').textContent = fmtNum(agg.unidades);
+  document.getElementById('hoy-ordenes').textContent = fmtNum(agg.ordenes);
+  document.getElementById('hoy-reach').textContent = fmtNum(agg.meta_reach);
+  document.getElementById('hoy-caption').textContent =
+    `${fmtNum(agg.unidades)} prendas · ${fmtNum(agg.ordenes)} pedidos`;
+
+  // Quick links subs
+  const yt = aggregate('ytd') || agg;
+  document.getElementById('hoy-ql-mkt').textContent = `${fmtEUR(yt.meta_gasto, 0)} YTD`;
+  if (RAW.seo && RAW.seo.summary) {
+    document.getElementById('hoy-ql-seo').textContent = `${RAW.seo.summary.currently_ranking || 0} keywords`;
+  } else {
+    document.getElementById('hoy-ql-seo').textContent = 'pendiente';
+  }
+  const totalLogros = RAW.logros && RAW.logros.hoy ? (RAW.logros.hoy.all || []).length : 0;
+  document.getElementById('hoy-ql-logros').textContent = `${totalLogros} hoy`;
+
+  // Chart 7 días
+  drawChart7d();
+
+  // Logros del día (top 5 de all)
+  const logros = (RAW.logros && RAW.logros.hoy && RAW.logros.hoy.all) || [];
+  const body = document.getElementById('hoy-logros-body');
+  body.innerHTML = logros.slice(0, 5).map(t => `<div class="concl-item">${escapeHtml(t)}</div>`).join('')
+    || '<div class="concl-empty">Aún sin actividad medible hoy. Vuelve pronto.</div>';
+}
+
+function drawChart7d() {
+  if (!RAW.daily) return;
+  const today = new Date();
+  const labels = [];
+  const ventasArr = [];
+  const gastoArr = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const k = isoDate(d);
+    const day = RAW.daily[k] || {};
+    const lbl = `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`;
+    labels.push(lbl);
+    ventasArr.push(day.ventas_netas || 0);
+    gastoArr.push(day.meta_gasto || 0);
+  }
+  if (chart7d) chart7d.destroy();
+  const ctx = document.getElementById('chart-7d').getContext('2d');
+  chart7d = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Ventas €', data: ventasArr, borderColor:'#a855f7', backgroundColor:'rgba(168,85,247,.18)', tension:.35, fill:true, pointRadius:3 },
+        { label: 'Gasto Meta €', data: gastoArr, borderColor:'#60a5fa', backgroundColor:'rgba(96,165,250,.12)', tension:.35, fill:true, pointRadius:3 },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color:'#94a3b8', font:{size:10}, boxWidth:10 } },
+        tooltip: { callbacks: { label: c => `${c.dataset.label}: ${fmtEUR(c.parsed.y, 0)}` } },
+      },
+      scales: {
+        x: { ticks: { color:'#475569', font:{size:10} }, grid:{ color:'rgba(255,255,255,.04)' } },
+        y: { ticks: { color:'#475569', font:{size:10}, callback: v => fmtEUR(v, 0) }, grid:{ color:'rgba(255,255,255,.04)' } },
+      },
+    },
+  });
+}
+
+// ─── MARKETING ────────────────────────────────────────────────────────
+function renderMarketing() {
+  document.getElementById('mkt-period-lbl').textContent = periodLabel(CURRENT_PERIOD);
+  const agg = aggregate(CURRENT_PERIOD);
+  if (!agg) return;
+  const ctr = agg.meta_impressions ? (agg.meta_clicks / agg.meta_impressions * 100) : 0;
+  const cpa = agg.ordenes ? (agg.meta_gasto / agg.ordenes) : 0;
+  const roas = agg.meta_gasto ? (agg.ventas_netas / agg.meta_gasto) : 0;
+  const ticket = agg.ordenes ? (agg.ventas_netas / agg.ordenes) : 0;
+
+  document.getElementById('mkt-gasto').textContent = fmtEUR(agg.meta_gasto);
+  document.getElementById('mkt-gasto-sub').textContent = `${fmtNum(agg.meta_purchases)} compras atribuidas`;
+  document.getElementById('mkt-reach').textContent = fmtNum(agg.meta_reach);
+  document.getElementById('mkt-imp-sub').textContent = `${fmtNum(agg.meta_impressions)} impresiones`;
+  document.getElementById('mkt-clicks').textContent = fmtNum(agg.meta_clicks);
+  document.getElementById('mkt-ctr-sub').textContent = `CTR ${fmtDec(ctr,2)}%`;
+  document.getElementById('mkt-cpa').textContent = fmtEUR(cpa);
+  document.getElementById('mkt-cpa-sub').textContent = `Ticket ${fmtEUR(ticket)}`;
+  document.getElementById('mkt-roas').textContent = `${fmtDec(roas,1)}x`;
+  document.getElementById('mkt-roas-sub').textContent = roas >= 1 ? 'Inversión rentable' : 'Bajo umbral';
+  document.getElementById('mkt-ventas').textContent = fmtEUR(agg.ventas_netas);
+  document.getElementById('mkt-ordenes-sub').textContent = `${fmtNum(agg.ordenes)} pedidos`;
+
+  // Cuentas Meta
+  const cuentas = (RAW.meta && RAW.meta.cuentas) || [];
+  document.getElementById('mkt-ads-grid').innerHTML = cuentas.length
+    ? cuentas.map(c => `
+        <div class="ad-card">
+          <div class="ad-name">${escapeHtml(c.nombre)}</div>
+          <div class="ad-spend">${fmtEUR(c.gasto)}</div>
+          <div class="ad-meta">${fmtNum(c.purchases||0)} compras · CPA ${fmtEUR(c.cpa||0)}</div>
+        </div>`).join('')
+    : '<div class="data-empty">Sin cuentas Meta configuradas</div>';
+
+  // Chart YTD
+  drawChartMktVs();
+
+  // Tablas top
+  const tp = (RAW.shopify && RAW.shopify.top_productos) || [];
+  document.getElementById('mkt-top-productos').innerHTML = tp.length
+    ? tp.slice(0,10).map(p => `<tr><td>${escapeHtml(p.nombre)}</td><td class="num">${fmtNum(p.unidades)}</td><td class="num">${fmtEUR(p.ventas)}</td></tr>`).join('')
+    : '<tr><td colspan="3" class="data-empty">Sin datos</td></tr>';
+
+  const can = (RAW.shopify && RAW.shopify.canales) || [];
+  document.getElementById('mkt-canales').innerHTML = can.length
+    ? can.slice(0,5).map(c => `<tr><td>${escapeHtml(c.canal)}</td><td class="num">${fmtNum(c.ordenes)}</td><td class="num">${fmtEUR(c.ventas_brutas)}</td></tr>`).join('')
+    : '<tr><td colspan="3" class="data-empty">Sin datos</td></tr>';
+
+  const desc = (RAW.shopify && RAW.shopify.codigos_descuento) || [];
+  document.getElementById('mkt-descuentos').innerHTML = desc.length
+    ? desc.slice(0,5).map(d => `<tr><td>${escapeHtml(d.codigo)}</td><td class="num">${fmtNum(d.usos)}</td><td class="num">${fmtEUR(d.monto)}</td></tr>`).join('')
+    : '<tr><td colspan="3" class="data-empty">Sin códigos usados</td></tr>';
+
+  // Logros del período (alcance + ventas + eficiencia)
+  const l = (RAW.logros && RAW.logros[CURRENT_PERIOD]) || { alcance:[], ventas:[], eficiencia:[] };
+  const all = [...(l.alcance||[]), ...(l.ventas||[]), ...(l.eficiencia||[])];
+  document.getElementById('mkt-logros-body').innerHTML = all.length
+    ? all.map(t => `<div class="concl-item">${escapeHtml(t)}</div>`).join('')
+    : '<div class="concl-empty">Aún sin datos suficientes en este período.</div>';
+}
+
+function drawChartMktVs() {
+  if (!RAW.daily) return;
+  const dates = Object.keys(RAW.daily).sort();
+  if (!dates.length) return;
+  const labels = dates.map(d => {
+    const [y,m,dd] = d.split('-');
+    return `${dd}/${m}`;
+  });
+  const ventasArr = dates.map(d => RAW.daily[d].ventas_netas || 0);
+  const gastoArr = dates.map(d => RAW.daily[d].meta_gasto || 0);
+  if (chartMktVs) chartMktVs.destroy();
+  const ctx = document.getElementById('chart-mkt-vs').getContext('2d');
+  chartMktVs = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Ventas €', data: ventasArr, borderColor:'#a855f7', backgroundColor:'rgba(168,85,247,.18)', tension:.3, fill:true, pointRadius:0 },
+        { label: 'Gasto Meta €', data: gastoArr, borderColor:'#60a5fa', backgroundColor:'rgba(96,165,250,.12)', tension:.3, fill:true, pointRadius:0 },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { labels: { color:'#94a3b8', font:{size:10}, boxWidth:10 } } },
+      scales: {
+        x: { ticks: { color:'#475569', font:{size:9}, maxTicksLimit:10 }, grid:{ color:'rgba(255,255,255,.04)' } },
+        y: { ticks: { color:'#475569', font:{size:9}, callback: v => fmtEUR(v,0) }, grid:{ color:'rgba(255,255,255,.04)' } },
+      },
+    },
+  });
+}
+
+// ─── SEO ──────────────────────────────────────────────────────────────
+function renderSeo() {
+  if (!RAW.seo) {
+    document.getElementById('seo-empty').style.display = 'block';
+    document.getElementById('seo-content').style.display = 'none';
+    return;
+  }
+  document.getElementById('seo-empty').style.display = 'none';
+  document.getElementById('seo-content').style.display = 'block';
+  const seo = RAW.seo;
+
+  document.getElementById('seo-domain').textContent = seo.domain || '—';
+
+  const audit = seo.audit_summary || {};
+  const summary = seo.summary || {};
+  const projections = seo.projections || {};
+
+  document.getElementById('seo-avg-score').textContent = audit.avg_score != null ? fmtDec(audit.avg_score, 1) + '/100' : '—';
+  document.getElementById('seo-articles-sub').textContent = audit.total_articles ? `${fmtNum(audit.total_articles)} artículos auditados` : '—';
+  document.getElementById('seo-rank-count').textContent = fmtNum(summary.currently_ranking || (seo.current_rankings || []).length);
+  document.getElementById('seo-rank-sub').textContent = summary.total_search_volume ? `${fmtNum(summary.total_search_volume)} búsquedas/mes` : '';
+  document.getElementById('seo-opp-count').textContent = fmtNum(summary.opportunity_keywords || (seo.top_opportunities || []).length);
+  document.getElementById('seo-opp-sub').textContent = projections.opportunity_volume_per_month ? `${fmtNum(projections.opportunity_volume_per_month)} búsquedas/mes` : '';
+  document.getElementById('seo-clicks').textContent = fmtNum(projections.current_estimated_clicks_per_month || 0);
+
+  // Progreso
+  const p = seo.progress || {};
+  if (p.improvement_pct != null) {
+    const sign = p.improvement_pct >= 0 ? '+' : '';
+    document.getElementById('seo-improvement').textContent = `${sign}${fmtDec(p.improvement_pct,1)}%`;
+    document.getElementById('seo-from-to').textContent = `${fmtDec(p.starting_avg_score||0,1)} → ${fmtDec(p.current_avg_score||0,1)}`;
+  }
+  const evo = p.score_evolution || [];
+  document.getElementById('seo-evo-list').innerHTML = evo.length
+    ? evo.slice(-5).map(e => `<div style="display:flex; justify-content:space-between; padding:3px 0; color:var(--txt2);"><span>${e.audit}</span><span><b style="color:var(--txt)">${fmtDec(e.score,1)}</b> / ${e.articles} blogs</span></div>`).join('')
+    : '<div style="color:var(--txt3); font-style:italic">Sin auditorías históricas todavía</div>';
+
+  const ach = p.achievements || [];
+  document.getElementById('seo-achievements').innerHTML = ach.map(a => `
+    <div class="ach-card">
+      <div class="ach-icon">${a.icon}</div>
+      <div class="ach-count">${fmtNum(a.count||0)}</div>
+      <div class="ach-label">${escapeHtml(a.label)}</div>
+    </div>`).join('');
+
+  // Proyecciones
+  document.getElementById('seo-proj-summary').textContent =
+    `Hoy generamos ~${fmtNum(projections.current_estimated_clicks_per_month||0)} visitas/mes. Si capturamos las ${fmtNum(projections.opportunity_volume_per_month||0)} búsquedas/mes en oportunidades…`;
+  const scenarios = projections.scenarios || [];
+  document.getElementById('seo-projections').innerHTML = scenarios.map((s, i) => `
+    <div class="proj-card${i === scenarios.length - 1 ? ' optimist' : ''}">
+      <div class="proj-name">${escapeHtml(s.name)}</div>
+      <div class="proj-revenue">${fmtEUR(s.estimated_revenue_eur_per_month || 0)}/mes</div>
+      <div class="proj-row"><span>Posición objetivo</span><b>#${s.target_position}</b></div>
+      <div class="proj-row"><span>Clics adicionales</span><b>+${fmtNum(s.additional_clicks_per_month)}</b></div>
+      <div class="proj-row"><span>Ventas estimadas</span><b>${fmtNum(s.estimated_sales_per_month)}/mes</b></div>
+      <div class="proj-tf">${escapeHtml(s.timeframe)}</div>
+    </div>`).join('');
+  if (projections.assumptions) {
+    document.getElementById('seo-proj-assumptions').textContent =
+      `Asumiendo ticket promedio de ${fmtEUR(projections.assumptions.ticket_promedio_eur||0)} y conversión ${fmtPct((projections.assumptions.conversion_rate||0)*100, 1)}.`;
+  }
+
+  // Distribución de score
+  const dist = audit.score_distribution || {};
+  const bands = [
+    { key:'90+',     label:'90+',  cls:'score-high' },
+    { key:'80-89',   label:'80–89', cls:'score-high' },
+    { key:'70-79',   label:'70–79', cls:'score-mid'  },
+    { key:'60-69',   label:'60–69', cls:'score-mid'  },
+    { key:'50-59',   label:'50–59', cls:'score-low'  },
+    { key:'under_50', label:'<50',  cls:'score-low'  },
+  ];
+  const maxN = Math.max(1, ...bands.map(b => dist[b.key] || 0));
+  document.getElementById('seo-score-dist').innerHTML = bands.map(b => {
+    const n = dist[b.key] || 0;
+    const w = (n / maxN * 100);
+    return `<div class="seo-bar-row"><div class="seo-bar-label"><span class="score-pill ${b.cls}">${b.label}</span></div><div class="seo-bar-track"><div class="seo-bar-fill" style="width:${w}%"></div></div><div class="seo-bar-count">${n}</div></div>`;
+  }).join('');
+
+  // Oportunidades
+  const opps = (seo.top_opportunities || []).slice(0, 15);
+  document.getElementById('seo-opps-table').innerHTML = opps.length
+    ? opps.map((o, i) => `<tr><td>${i+1}</td><td>${escapeHtml(o.keyword)}</td><td class="num">${fmtNum(o.volume||0)}</td><td class="num">${o.difficulty != null ? o.difficulty : '—'}</td></tr>`).join('')
+    : '<tr><td colspan="4" class="data-empty">Sin oportunidades</td></tr>';
+
+  // Rankings
+  const rank = (seo.current_rankings || []).slice(0, 20);
+  document.getElementById('seo-rankings-table').innerHTML = rank.length
+    ? rank.map(r => `<tr><td>${escapeHtml(r.keyword)}</td><td class="num">${r.position}</td><td class="num">${fmtNum(r.volume||0)}</td></tr>`).join('')
+    : '<tr><td colspan="3" class="data-empty">Sin rankings</td></tr>';
+}
+
+// ─── LOGROS ───────────────────────────────────────────────────────────
+function renderLogros() {
+  document.getElementById('logros-period-lbl').textContent = periodLabel(CURRENT_PERIOD);
+  const l = (RAW.logros && RAW.logros[CURRENT_PERIOD]) || { alcance:[], ventas:[], eficiencia:[], seo:[] };
+
+  const renderGroup = (containerId, countId, items) => {
+    document.getElementById(countId).textContent = items.length;
+    document.getElementById(containerId).innerHTML = items.length
+      ? items.map(t => `<div class="concl-item">${escapeHtml(t)}</div>`).join('')
+      : '<div class="concl-empty">Aún sin datos suficientes en este período.</div>';
+  };
+
+  renderGroup('g-alcance',    'g-alcance-count',    l.alcance    || []);
+  renderGroup('g-ventas',     'g-ventas-count',     l.ventas     || []);
+  renderGroup('g-eficiencia', 'g-eficiencia-count', l.eficiencia || []);
+  renderGroup('g-seo',        'g-seo-count',        l.seo        || []);
+}
+
+// ─── helpers ──────────────────────────────────────────────────────────
+function escapeHtml(s) {
+  if (s == null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+}
+
+function showError(msg) {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('error-container').innerHTML =
+    `<div class="error-box">⚠️ ${escapeHtml(msg)}</div>`;
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────
+async function init() {
+  setGreeting();
+  try {
+    const r = await fetch('data.json?t=' + Date.now());
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    RAW = await r.json();
+  } catch (e) {
+    showError(`No se pudo cargar data.json: ${e.message}. Ejecuta el pipeline 'python main.py' para generar el archivo.`);
+    return;
+  }
+
+  // updated_at formateado
+  if (RAW.updated_at) {
+    try {
+      const dt = new Date(RAW.updated_at);
+      document.getElementById('updated-at').textContent =
+        dt.toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' });
+    } catch { document.getElementById('updated-at').textContent = RAW.updated_at; }
+  }
+
+  // mostrar errores no fatales
+  const errs = RAW.errors || {};
+  const errMsgs = Object.entries(errs).filter(([_,v]) => v).map(([k,v]) => `${k}: ${v}`);
+  if (errMsgs.length) {
+    document.getElementById('error-container').innerHTML =
+      `<div class="error-box">⚠️ Algunas fuentes fallaron en la última corrida:<br>${errMsgs.map(escapeHtml).join('<br>')}</div>`;
+  }
+
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  renderTab();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+
+</body>
+</html>

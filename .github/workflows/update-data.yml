@@ -1,0 +1,50 @@
+name: Update Youarenotalone Dashboard
+
+on:
+  schedule:
+    # 3 corridas/día en hora CET. Usamos UTC en GitHub Actions:
+    # En invierno (CET=UTC+1): 08→07, 14→13, 21→20
+    # En verano (CEST=UTC+2): 08→06, 14→12, 21→19
+    # Disparamos en ambos para que en cualquier estación corra cerca de la hora local.
+    - cron: '0 6 * * *'   # 08:00 CEST verano
+    - cron: '0 7 * * *'   # 08:00 CET invierno
+    - cron: '0 12 * * *'  # 14:00 CEST verano
+    - cron: '0 13 * * *'  # 14:00 CET invierno
+    - cron: '0 19 * * *'  # 21:00 CEST verano
+    - cron: '0 20 * * *'  # 21:00 CET invierno
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          SHOPIFY_STORE:         ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_ACCESS_TOKEN:  ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+          META_ACCESS_TOKEN:     ${{ secrets.META_ACCESS_TOKEN }}
+          META_ACCOUNT_IDS:      ${{ secrets.META_ACCOUNT_IDS }}
+        run: python main.py
+
+      - name: Commit & push if changed
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name  "Yana Bot"
+          git add dashboard.json dashboard/data.json
+          git diff --staged --quiet || git commit -m "📊 Datos actualizados $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
