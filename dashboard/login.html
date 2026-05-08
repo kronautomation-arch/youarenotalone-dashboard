@@ -138,9 +138,9 @@
   <div class="orb b"></div>
 
   <div class="card">
-    <div class="brand">
-      <div class="brand-mark">K</div>
-      <div class="brand-txt">Kronautomation</div>
+    <div class="brand" id="brand">
+      <div class="brand-mark" id="brand-mark">K</div>
+      <div class="brand-txt" id="brand-txt">Kronautomation</div>
     </div>
 
     <div class="project-row">
@@ -193,6 +193,28 @@
     pill.textContent = '● ' + projectId;
   } else {
     pill.style.display = 'none';
+  }
+
+  // Logo de marca dinámico por proyecto
+  const PROJECT_BRANDS = {
+    youarenotalone: { logo: 'YANALOGO.png', name: 'Youarenotalone' },
+  };
+  const brand = PROJECT_BRANDS[projectId];
+  if (brand) {
+    const mark = document.getElementById('brand-mark');
+    mark.textContent = '';
+    mark.style.background = 'linear-gradient(135deg, rgba(124,58,237,.22), rgba(168,85,247,.08))';
+    mark.style.border = '1px solid rgba(168,85,247,.35)';
+    mark.style.padding = '4px';
+    mark.style.overflow = 'hidden';
+    const img = document.createElement('img');
+    img.src = brand.logo;
+    img.alt = brand.name;
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'contain';
+    mark.appendChild(img);
+    document.getElementById('brand-txt').textContent = brand.name;
   }
 
   const errBox = document.getElementById('err');
