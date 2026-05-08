@@ -1,0 +1,57 @@
+{
+  "_comment": "Configuración SEO de Yana. Lo lee tools/seo/brief_generator.py cuando se acaban los briefs en briefs/.",
+  "domain": "youarenotaloneproject.com",
+  "location_code": 2724,
+  "location_name": "España",
+  "language_code": "es",
+  "seed_keywords": [
+    "moda sostenible",
+    "ropa sostenible",
+    "ropa ecológica",
+    "ropa orgánica",
+    "moda ética",
+    "ropa con mensaje",
+    "camiseta motivacional",
+    "sudadera motivacional",
+    "camiseta con frase",
+    "ropa solidaria",
+    "moda lenta",
+    "regalo solidario",
+    "ropa vegana",
+    "marcas sostenibles"
+  ],
+  "min_volume": 20,
+  "max_difficulty": 60,
+  "top_briefs_per_refresh": 10,
+  "_comment_relevance": "La keyword debe contener AL MENOS UN producto AND AL MENOS UN atributo del nicho. Filtra ruido (ej. 'cesto ropa sucia' tiene producto pero ningún atributo).",
+  "required_product_terms": [
+    "ropa", "moda", "camiseta", "camisetas", "sudadera", "sudaderas",
+    "prenda", "prendas", "ropas", "vestido", "vestidos",
+    "regalo", "regalos"
+  ],
+  "required_niche_terms": [
+    "sostenible", "sostenibles", "ecológica", "ecologica", "ecológico", "ecologico",
+    "orgánica", "organica", "orgánico", "organico",
+    "ética", "etica", "ético", "etico", "vegana", "vegano",
+    "reciclada", "reciclado", "natural",
+    "salud mental", "propósito", "proposito",
+    "mensaje", "mensajes", "motivacional", "motivacionales",
+    "frase", "frases", "cita", "citas",
+    "solidaria", "solidario", "solidaridad",
+    "justa", "consciente", "valores", "purpose",
+    "comercio justo", "slow fashion", "fair trade"
+  ],
+  "exclude_keywords_containing": [
+    "amazon", "shein", "zara", "primark", "nike", "adidas",
+    "deportiva", "deporte", "fitness",
+    "niño", "niña", "bebé", "bebe", "kids",
+    "tatuaje", "tatuajes",
+    "cortes de pelo", "peluquería", "peinado",
+    "skechers", "sandalias",
+    "clotsy", "somia", "ecodicta", "skfk", "elisa muresan",
+    "ecoalf", "tiralahilacha", "verdemoscú", "verdemoscu",
+    "fieito", "brava fabrics", "oxfam", "patagonia", "mango",
+    "bohodot", "veraluna", "mussel", "thinking mu",
+    "alquimia tienda", "tienda de ropa sostenible"
+  ]
+}

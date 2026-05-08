@@ -11,7 +11,7 @@ on:
 jobs:
   generate-and-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: write
 
@@ -27,34 +27,30 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Verificar que hay briefs pendientes
-        id: check_briefs
+      - name: Refrescar briefs si no quedan
+        env:
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
         run: |
           pending=$(ls briefs/2*.json 2>/dev/null | wc -l)
           echo "Briefs pendientes: $pending"
-          echo "pending=$pending" >> $GITHUB_OUTPUT
-
-      - name: Skip si no hay briefs
-        if: steps.check_briefs.outputs.pending == '0'
-        run: |
-          echo "::warning::Sin briefs pendientes. Refrescar localmente con seo-system y commitear nuevos briefs/."
-          exit 0
+          if [ "$pending" -eq "0" ]; then
+            echo "Sin briefs pendientes — ejecutando brief_generator (DataForSEO)"
+            python -m tools.seo.brief_generator
+          fi
 
       - name: Generar siguiente blog con Claude
-        if: steps.check_briefs.outputs.pending != '0'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python -m tools.blog.generator
 
       - name: Publicar en Shopify
-        if: steps.check_briefs.outputs.pending != '0'
         env:
           SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
         run: python -m tools.blog.publisher --next
 
       - name: Commit y push
-        if: steps.check_briefs.outputs.pending != '0'
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name  "Yana Bot"
