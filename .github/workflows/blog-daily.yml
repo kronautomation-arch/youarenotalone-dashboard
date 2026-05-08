@@ -1,0 +1,63 @@
+name: Blog diario Youarenotalone
+
+on:
+  schedule:
+    # 09:00 CET (verano UTC+2 → 07:00 UTC, invierno UTC+1 → 08:00 UTC).
+    # Disparamos en ambos para cubrir el cambio de horario.
+    - cron: '0 7 * * *'   # 09:00 CEST (verano)
+    - cron: '0 8 * * *'   # 09:00 CET  (invierno)
+  workflow_dispatch:      # Ejecución manual desde la UI de GitHub
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Verificar que hay briefs pendientes
+        id: check_briefs
+        run: |
+          pending=$(ls briefs/2*.json 2>/dev/null | wc -l)
+          echo "Briefs pendientes: $pending"
+          echo "pending=$pending" >> $GITHUB_OUTPUT
+
+      - name: Skip si no hay briefs
+        if: steps.check_briefs.outputs.pending == '0'
+        run: |
+          echo "::warning::Sin briefs pendientes. Refrescar localmente con seo-system y commitear nuevos briefs/."
+          exit 0
+
+      - name: Generar siguiente blog con Claude
+        if: steps.check_briefs.outputs.pending != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m tools.blog.generator
+
+      - name: Publicar en Shopify
+        if: steps.check_briefs.outputs.pending != '0'
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+        run: python -m tools.blog.publisher --next
+
+      - name: Commit y push
+        if: steps.check_briefs.outputs.pending != '0'
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name  "Yana Bot"
+          git add blogs/ briefs/
+          git diff --staged --quiet || git commit -m "✍️ Blog diario auto-generado $(date -u +'%Y-%m-%d')"
+          git push
