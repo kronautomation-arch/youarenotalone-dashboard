@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T00:21:36+02:00",
+  "updated_at": "2026-05-08T02:16:15+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -82,35 +82,508 @@
     "unidades_por_orden": 0
   },
   "daily": {},
-  "seo": null,
+  "seo": {
+    "store_id": "youarenotalone",
+    "store_name": "Youarenotalone",
+    "domain": "youarenotaloneproject.com",
+    "country": "España",
+    "generated_at": "2026-05-07T19:15:35.230331",
+    "summary": {
+      "opportunity_keywords": 11,
+      "currently_ranking": 30,
+      "pending_blog_topics": 5,
+      "published_blogs_total": 0,
+      "total_search_volume": 1060,
+      "avg_difficulty": 9.9
+    },
+    "top_opportunities": [
+      {
+        "keyword": "ropa ecológica mujer",
+        "volume": 260,
+        "difficulty": 0,
+        "cpc": 0.63,
+        "competition": "HIGH",
+        "opportunity": 2600.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      },
+      {
+        "keyword": "marcas de ropa sostenible baratas",
+        "volume": 90,
+        "difficulty": 0,
+        "cpc": 0.65,
+        "competition": "HIGH",
+        "opportunity": 900.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      },
+      {
+        "keyword": "ropa sostenible barcelona",
+        "volume": 70,
+        "difficulty": 0,
+        "cpc": 0.68,
+        "competition": "HIGH",
+        "opportunity": 700.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      },
+      {
+        "keyword": "ropa sostenible mujer barata",
+        "volume": 50,
+        "difficulty": 0,
+        "cpc": 0.91,
+        "competition": "HIGH",
+        "opportunity": 500.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      },
+      {
+        "keyword": "ropa sostenible mujer españa",
+        "volume": 30,
+        "difficulty": 0,
+        "cpc": 0.59,
+        "competition": "HIGH",
+        "opportunity": 300.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      },
+      {
+        "keyword": "moda sostenible mujer",
+        "volume": 50,
+        "difficulty": 1,
+        "cpc": 0.54,
+        "competition": "HIGH",
+        "opportunity": 250.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      },
+      {
+        "keyword": "marcas moda sostenible españa",
+        "volume": 20,
+        "difficulty": 0,
+        "cpc": 0.36,
+        "competition": "HIGH",
+        "opportunity": 200.0,
+        "intent": "",
+        "source_seed": "moda sostenible españa"
+      },
+      {
+        "keyword": "moda sostenible en españa",
+        "volume": 170,
+        "difficulty": 13,
+        "cpc": 0.66,
+        "competition": "HIGH",
+        "opportunity": 121.4,
+        "intent": "",
+        "source_seed": "moda sostenible españa"
+      },
+      {
+        "keyword": "moda sostenible españa",
+        "volume": 170,
+        "difficulty": 14,
+        "cpc": 0.66,
+        "competition": "HIGH",
+        "opportunity": 113.3,
+        "intent": "",
+        "source_seed": "moda sostenible españa"
+      },
+      {
+        "keyword": "marcas de moda sostenible",
+        "volume": 110,
+        "difficulty": 13,
+        "cpc": 0.76,
+        "competition": "MEDIUM",
+        "opportunity": 78.6,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      },
+      {
+        "keyword": "tiendas de ropa sostenible online",
+        "volume": 40,
+        "difficulty": 68,
+        "cpc": 0.58,
+        "competition": "HIGH",
+        "opportunity": 5.8,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related"
+      }
+    ],
+    "current_rankings": [
+      {
+        "keyword": "estilo urban hombre",
+        "position": 4,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
+        "title": "Moda urbana hombre: guía 2025 para un estilo auténtico",
+        "difficulty": 0
+      },
+      {
+        "keyword": "estilo urbano hombres",
+        "position": 4,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
+        "title": "Moda urbana hombre: guía 2025 para un estilo auténtico",
+        "difficulty": 0
+      },
+      {
+        "keyword": "estilos urbanos hombres",
+        "position": 5,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
+        "title": "Moda urbana hombre: guía 2025 para un estilo ...",
+        "difficulty": 0
+      },
+      {
+        "keyword": "moda hombre urbana",
+        "position": 6,
+        "volume": 140,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
+        "title": "Moda urbana hombre: guía 2025 para un estilo auténtico",
+        "difficulty": 0
+      },
+      {
+        "keyword": "estilo urbano hombre",
+        "position": 8,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
+        "title": "Moda urbana hombre: guía 2025 para un estilo ...",
+        "difficulty": 0
+      },
+      {
+        "keyword": "eventos moda",
+        "position": 10,
+        "volume": 90,
+        "url": "https://youarenotaloneproject.com/blog/moda/listado-eventos-de-moda-2025/",
+        "title": "Los eventos de moda más importantes en 2025: fechas y ...",
+        "difficulty": 12
+      },
+      {
+        "keyword": "look con chalecos",
+        "position": 10,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-mujer/",
+        "title": "Outfit con chalecos mujer | Ideas para combinar con estilo",
+        "difficulty": 0
+      },
+      {
+        "keyword": "estilo urbano",
+        "position": 11,
+        "volume": 880,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-que-es/",
+        "title": "Moda Urbana: Qué es, Orígenes y Hacia Dónde Va",
+        "difficulty": 0
+      },
+      {
+        "keyword": "notalone",
+        "position": 11,
+        "volume": 210,
+        "url": "https://youarenotaloneproject.com/",
+        "title": "You Are Not Alone",
+        "difficulty": 0
+      },
+      {
+        "keyword": "outfit con chaleco hombre",
+        "position": 11,
+        "volume": 170,
+        "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-hombre/",
+        "title": "Outfit con chalecos hombre: ideas y combinaciones",
+        "difficulty": 0
+      },
+      {
+        "keyword": "marcas de ropa hombre más famosas",
+        "position": 13,
+        "volume": 90,
+        "url": "https://youarenotaloneproject.com/blog/moda/marcas-moda-hombre-2025/",
+        "title": "Marcas de Moda Hombre: Las Mejores Firmas y ...",
+        "difficulty": 0
+      },
+      {
+        "keyword": "minimalista ropa",
+        "position": 13,
+        "volume": 210,
+        "url": "https://youarenotaloneproject.com/blog/moda/estilo-minimalista-ropa/",
+        "title": "Estilo Minimalista en Ropa: Guía Completa y Consejos 2025",
+        "difficulty": 0
+      },
+      {
+        "keyword": "marcas de ropa urbana",
+        "position": 14,
+        "volume": 210,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/tendencias-en-la-moda-urbana-2025/",
+        "title": "Mejores 10 Marcas de Moda Urbana en 2025",
+        "difficulty": 0
+      },
+      {
+        "keyword": "minimalista na moda",
+        "position": 15,
+        "volume": 110,
+        "url": "https://youarenotaloneproject.com/blog/moda/estilo-minimalista-ropa/",
+        "title": "Estilo Minimalista en Ropa: Guía Completa y Consejos 2025",
+        "difficulty": 0
+      },
+      {
+        "keyword": "outfit con chaleco mujer",
+        "position": 15,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-mujer/",
+        "title": "Outfit con chalecos mujer | Ideas para combinar con estilo",
+        "difficulty": 0
+      },
+      {
+        "keyword": "moda urbana hombre",
+        "position": 16,
+        "volume": 140,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
+        "title": "Moda urbana hombre: guía 2025 para un estilo auténtico",
+        "difficulty": 0
+      },
+      {
+        "keyword": "outfits con chaleco hombre",
+        "position": 16,
+        "volume": 170,
+        "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-hombre/",
+        "title": "Outfit con chalecos hombre: ideas y combinaciones",
+        "difficulty": 0
+      },
+      {
+        "keyword": "outfits hombre urbano",
+        "position": 17,
+        "volume": 140,
+        "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
+        "title": "Moda urbana hombre: guía 2025 para un estilo auténtico",
+        "difficulty": 0
+      },
+      {
+        "keyword": "looks de otoño 2025",
+        "position": 19,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda/look-otono-2025/",
+        "title": "Look Otoño 2025: Ideas y Tendencias para Vestir con Estilo",
+        "difficulty": 0
+      },
+      {
+        "keyword": "estilo minimalista en ropa",
+        "position": 21,
+        "volume": 260,
+        "url": "https://youarenotaloneproject.com/blog/moda/estilo-minimalista-ropa/",
+        "title": "Estilo Minimalista en Ropa: Guía Completa y Consejos 2025",
+        "difficulty": 0
+      }
+    ],
+    "next_blog_topics": [
+      {
+        "keyword": "ropa ecológica mujer",
+        "volume": 260,
+        "difficulty": 0,
+        "cpc": 0.63,
+        "competition": "HIGH",
+        "opportunity": 2600.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related",
+        "related_in_cluster": []
+      },
+      {
+        "keyword": "marcas de ropa sostenible baratas",
+        "volume": 90,
+        "difficulty": 0,
+        "cpc": 0.65,
+        "competition": "HIGH",
+        "opportunity": 900.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related",
+        "related_in_cluster": []
+      },
+      {
+        "keyword": "ropa sostenible barcelona",
+        "volume": 70,
+        "difficulty": 0,
+        "cpc": 0.68,
+        "competition": "HIGH",
+        "opportunity": 700.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related",
+        "related_in_cluster": [
+          "ropa sostenible mujer barata"
+        ]
+      },
+      {
+        "keyword": "moda sostenible mujer",
+        "volume": 50,
+        "difficulty": 1,
+        "cpc": 0.54,
+        "competition": "HIGH",
+        "opportunity": 250.0,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related",
+        "related_in_cluster": [
+          "moda sostenible en españa",
+          "moda sostenible españa"
+        ]
+      },
+      {
+        "keyword": "marcas de moda sostenible",
+        "volume": 110,
+        "difficulty": 13,
+        "cpc": 0.76,
+        "competition": "MEDIUM",
+        "opportunity": 78.6,
+        "source_seed": "moda sostenible españa",
+        "source_type": "related",
+        "related_in_cluster": []
+      }
+    ],
+    "recent_publications": [],
+    "rank_distribution": {
+      "top_3": 0,
+      "4_10": 7,
+      "11_30": 23,
+      "31_50": 0,
+      "50_plus": 0
+    },
+    "opportunity_by_volume_band": {
+      "10k_plus": 0,
+      "1k_10k": 0,
+      "100_1k": 4,
+      "50_100": 4,
+      "under_50": 3
+    },
+    "progress": {
+      "starting_avg_score": 0,
+      "current_avg_score": 0,
+      "improvement_pct": 0,
+      "score_evolution": [],
+      "achievements": [
+        {
+          "icon": "📊",
+          "label": "Blogs auditados",
+          "count": 0
+        },
+        {
+          "icon": "✍️",
+          "label": "Blogs reescritos con DataForSEO",
+          "count": 0
+        },
+        {
+          "icon": "🆕",
+          "label": "Blogs nuevos publicados",
+          "count": 0
+        },
+        {
+          "icon": "❓",
+          "label": "Blogs con FAQ schema (PAA real)",
+          "count": 0
+        },
+        {
+          "icon": "🎯",
+          "label": "Blogs con score 70+",
+          "count": 0
+        },
+        {
+          "icon": "⭐",
+          "label": "Blogs con score 80+",
+          "count": 0
+        }
+      ]
+    },
+    "projections": {
+      "current_estimated_clicks_per_month": 83,
+      "opportunity_volume_per_month": 1060,
+      "assumptions": {
+        "ticket_promedio_eur": 50.0,
+        "conversion_rate": 0.02,
+        "ctr_table": "Google avg (pos 1=30%, pos 5=5%, pos 10=1.8%)"
+      },
+      "scenarios": [
+        {
+          "name": "Conservador",
+          "target_position": 10,
+          "timeframe": "6 meses",
+          "additional_clicks_per_month": 19,
+          "total_clicks_per_month": 102,
+          "estimated_sales_per_month": 2,
+          "estimated_revenue_eur_per_month": 100
+        },
+        {
+          "name": "Realista",
+          "target_position": 5,
+          "timeframe": "6-12 meses",
+          "additional_clicks_per_month": 53,
+          "total_clicks_per_month": 136,
+          "estimated_sales_per_month": 3,
+          "estimated_revenue_eur_per_month": 150
+        },
+        {
+          "name": "Optimista",
+          "target_position": 3,
+          "timeframe": "12-18 meses",
+          "additional_clicks_per_month": 106,
+          "total_clicks_per_month": 189,
+          "estimated_sales_per_month": 4,
+          "estimated_revenue_eur_per_month": 200
+        }
+      ]
+    }
+  },
   "logros": {
     "hoy": {
       "alcance": [],
       "ventas": [],
       "eficiencia": [],
-      "seo": [],
-      "all": []
+      "seo": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ],
+      "all": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ]
     },
     "semana": {
       "alcance": [],
       "ventas": [],
       "eficiencia": [],
-      "seo": [],
-      "all": []
+      "seo": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ],
+      "all": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ]
     },
     "mes": {
       "alcance": [],
       "ventas": [],
       "eficiencia": [],
-      "seo": [],
-      "all": []
+      "seo": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ],
+      "all": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ]
     },
     "ytd": {
       "alcance": [],
       "ventas": [],
       "eficiencia": [],
-      "seo": [],
-      "all": []
+      "seo": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ],
+      "all": [
+        "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
+        "🌱 11 oportunidades de keywords detectadas con 1.060 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
+        "🌐 ~83 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
+      ]
     }
   }
 }
