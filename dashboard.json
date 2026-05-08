@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T02:27:51+02:00",
+  "updated_at": "2026-05-08T10:18:57+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -71,7 +71,7 @@
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.00023222,
+      "avg_rate": 0.00023219,
       "source": "fawazahmed0/exchange-api"
     }
   },
