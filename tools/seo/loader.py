@@ -45,11 +45,18 @@ def load_seo_section(
     """
     repo_root = Path(__file__).resolve().parent.parent.parent
     seo_root = repo_root.parent / "seo-system" / "output" / project
+    local_seo = repo_root / "seo" / "seo_dashboard.json"
 
+    # Preferir el seo-system fresco; si no existe (ej. en GitHub Actions),
+    # usar la copia local commiteada al repo.
     seo_path = seo_root / "reports" / "seo_dashboard.json"
     if not seo_path.exists():
-        logger.warning(f"SEO data no encontrada en {seo_path} — el tab SEO mostrará vacío")
-        return None
+        if local_seo.exists():
+            seo_path = local_seo
+            logger.info(f"SEO desde fallback local {local_seo}")
+        else:
+            logger.warning(f"SEO data no encontrada — el tab SEO mostrará vacío")
+            return None
 
     try:
         with open(seo_path, encoding="utf-8") as f:
