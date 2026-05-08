@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T10:18:57+02:00",
+  "updated_at": "2026-05-08T15:19:32+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -446,6 +446,20 @@
       "100_1k": 4,
       "50_100": 4,
       "under_50": 3
+    },
+    "audit_summary": {
+      "audited_at": null,
+      "total_articles": 0,
+      "avg_score": 0,
+      "score_distribution": {
+        "90+": 0,
+        "80-89": 0,
+        "70-79": 0,
+        "60-69": 0,
+        "50-59": 0,
+        "under_50": 0
+      },
+      "worst_5": []
     },
     "progress": {
       "starting_avg_score": 0,
