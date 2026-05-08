@@ -43,24 +43,24 @@
       50%  { opacity:1;   transform:scale(1.05) translateY(-1.2%); }
       100% { opacity:.9;  transform:scale(.98) translateY(1%); }
     }
-    .orb { position:absolute; border-radius:50%; pointer-events:none; z-index:0; filter:blur(48px); will-change:transform; }
-    .orb.a { width:340px; height:340px; background:rgba(124,58,237,.18); top:-120px; right:-100px; animation: drift-a 18s ease-in-out infinite alternate; }
-    .orb.b { width:240px; height:240px; background:rgba(29,78,216,.16); bottom:-80px; left:-80px; animation: drift-b 22s ease-in-out infinite alternate; }
-    .orb.c { width:180px; height:180px; background:rgba(168,85,247,.14); top:40%; left:50%; transform:translate(-50%,-50%); animation: drift-c 16s ease-in-out infinite alternate; }
+    .orb { position:absolute; border-radius:50%; pointer-events:none; z-index:0; filter:blur(40px); will-change:transform,opacity; }
+    .orb.a { width:380px; height:380px; background:rgba(124,58,237,.34); top:-140px; right:-120px; animation: drift-a 12s ease-in-out infinite alternate; }
+    .orb.b { width:280px; height:280px; background:rgba(29,78,216,.30); bottom:-100px; left:-90px; animation: drift-b 14s ease-in-out infinite alternate; }
+    .orb.c { width:220px; height:220px; background:rgba(168,85,247,.28); top:50%; left:50%; animation: drift-c 10s ease-in-out infinite alternate; }
     @keyframes drift-a {
-      0%   { transform:translate(0,0)        scale(1); }
-      50%  { transform:translate(-30px,40px) scale(1.08); }
-      100% { transform:translate(20px,-25px) scale(.95); }
+      0%   { transform:translate(0,0)         scale(1);    opacity:.85; }
+      50%  { transform:translate(-90px,110px) scale(1.18); opacity:1; }
+      100% { transform:translate(70px,-70px)  scale(.85);  opacity:.7; }
     }
     @keyframes drift-b {
-      0%   { transform:translate(0,0)         scale(1); }
-      50%  { transform:translate(40px,-30px)  scale(1.1); }
-      100% { transform:translate(-25px,20px)  scale(.92); }
+      0%   { transform:translate(0,0)         scale(1);   opacity:.8; }
+      50%  { transform:translate(120px,-90px) scale(1.2); opacity:1; }
+      100% { transform:translate(-80px,60px)  scale(.85); opacity:.65; }
     }
     @keyframes drift-c {
-      0%   { transform:translate(-50%,-50%)              scale(1)    rotate(0deg); }
-      50%  { transform:translate(calc(-50% + 60px),calc(-50% - 40px)) scale(1.15) rotate(10deg); }
-      100% { transform:translate(calc(-50% - 40px),calc(-50% + 30px)) scale(.9)  rotate(-8deg); }
+      0%   { transform:translate(-50%,-50%)                              scale(1)    rotate(0deg);  opacity:.7; }
+      50%  { transform:translate(calc(-50% + 140px),calc(-50% - 110px))  scale(1.25) rotate(20deg); opacity:1; }
+      100% { transform:translate(calc(-50% - 110px),calc(-50% + 90px))   scale(.85)  rotate(-15deg); opacity:.6; }
     }
     @media (prefers-reduced-motion: reduce) {
       body::before, .orb { animation:none !important; }
@@ -77,10 +77,11 @@
       padding:36px 32px 30px;
       backdrop-filter:blur(28px); -webkit-backdrop-filter:blur(28px);
       box-shadow: 0 24px 60px rgba(0,0,0,.5);
-      animation: card-in .7s cubic-bezier(.16,1,.3,1) both;
+      animation: card-in 1.1s cubic-bezier(.16,1,.3,1) both;
     }
     @keyframes card-in {
-      0%   { opacity:0; transform:translateY(18px) scale(.97); filter:blur(6px); }
+      0%   { opacity:0; transform:translateY(40px) scale(.92); filter:blur(14px); }
+      60%  { opacity:1; filter:blur(0); }
       100% { opacity:1; transform:translateY(0)    scale(1);   filter:blur(0); }
     }
     .brand { display:flex; align-items:center; gap:10px; justify-content:center; margin-bottom:30px; }
