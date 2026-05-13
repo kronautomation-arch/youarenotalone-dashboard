@@ -1,16 +1,16 @@
 {
   "store_id": "youarenotalone",
-  "store_name": "Youarenotalone",
+  "store_name": "You Are Not Alone Project",
   "domain": "youarenotaloneproject.com",
   "country": "España",
-  "generated_at": "2026-05-07T19:15:35.230331",
+  "generated_at": "2026-05-13T15:41:15.812100",
   "summary": {
-    "opportunity_keywords": 11,
+    "opportunity_keywords": 17,
     "currently_ranking": 30,
-    "pending_blog_topics": 5,
-    "published_blogs_total": 0,
-    "total_search_volume": 1060,
-    "avg_difficulty": 9.9
+    "pending_blog_topics": 4,
+    "published_blogs_total": 4,
+    "total_search_volume": 1340,
+    "avg_difficulty": 6.4
   },
   "top_opportunities": [
     {
@@ -21,6 +21,16 @@
       "competition": "HIGH",
       "opportunity": 2600.0,
       "source_seed": "moda sostenible españa",
+      "source_type": "related"
+    },
+    {
+      "keyword": "camisetas humor",
+      "volume": 110,
+      "difficulty": 0,
+      "cpc": 0.28,
+      "competition": "HIGH",
+      "opportunity": 1100.0,
+      "source_seed": "camisetas con frases motivadoras",
       "source_type": "related"
     },
     {
@@ -54,6 +64,26 @@
       "source_type": "related"
     },
     {
+      "keyword": "camisetas con frases motivadoras",
+      "volume": 50,
+      "difficulty": 0,
+      "cpc": 0.58,
+      "competition": "HIGH",
+      "opportunity": 500.0,
+      "intent": "",
+      "source_seed": "camisetas con frases motivadoras"
+    },
+    {
+      "keyword": "frases para personalizar camisetas",
+      "volume": 50,
+      "difficulty": 0,
+      "cpc": 0.9,
+      "competition": "HIGH",
+      "opportunity": 500.0,
+      "source_seed": "camisetas con frases motivadoras",
+      "source_type": "related"
+    },
+    {
       "keyword": "ropa sostenible mujer españa",
       "volume": 30,
       "difficulty": 0,
@@ -61,6 +91,16 @@
       "competition": "HIGH",
       "opportunity": 300.0,
       "source_seed": "moda sostenible españa",
+      "source_type": "related"
+    },
+    {
+      "keyword": "frases para camisetas de camareros",
+      "volume": 30,
+      "difficulty": 0,
+      "cpc": 0.05,
+      "competition": "MEDIUM",
+      "opportunity": 300.0,
+      "source_seed": "camisetas con frases motivadoras",
       "source_type": "related"
     },
     {
@@ -82,6 +122,26 @@
       "opportunity": 200.0,
       "intent": "",
       "source_seed": "moda sostenible españa"
+    },
+    {
+      "keyword": "frases graciosas para peñas",
+      "volume": 20,
+      "difficulty": 0,
+      "cpc": 0,
+      "competition": "LOW",
+      "opportunity": 200.0,
+      "source_seed": "camisetas con frases motivadoras",
+      "source_type": "related"
+    },
+    {
+      "keyword": "frases para camisetas de grupos de amigos",
+      "volume": 20,
+      "difficulty": 0,
+      "cpc": 0,
+      "competition": "HIGH",
+      "opportunity": 200.0,
+      "source_seed": "camisetas con frases motivadoras",
+      "source_type": "related"
     },
     {
       "keyword": "moda sostenible en españa",
@@ -182,6 +242,14 @@
       "difficulty": 0
     },
     {
+      "keyword": "desfiles de moda 2025",
+      "position": 11,
+      "volume": 170,
+      "url": "https://youarenotaloneproject.com/blog/moda/listado-eventos-de-moda-2025/",
+      "title": "Los eventos de moda más importantes en 2025",
+      "difficulty": 0
+    },
+    {
       "keyword": "estilo urbano",
       "position": 11,
       "volume": 880,
@@ -195,14 +263,6 @@
       "volume": 210,
       "url": "https://youarenotaloneproject.com/",
       "title": "You Are Not Alone",
-      "difficulty": 0
-    },
-    {
-      "keyword": "outfit con chaleco hombre",
-      "position": 11,
-      "volume": 170,
-      "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-hombre/",
-      "title": "Outfit con chalecos hombre: ideas y combinaciones",
       "difficulty": 0
     },
     {
@@ -222,14 +282,6 @@
       "difficulty": 0
     },
     {
-      "keyword": "marcas de ropa urbana",
-      "position": 14,
-      "volume": 210,
-      "url": "https://youarenotaloneproject.com/blog/moda-urbana/tendencias-en-la-moda-urbana-2025/",
-      "title": "Mejores 10 Marcas de Moda Urbana en 2025",
-      "difficulty": 0
-    },
-    {
       "keyword": "minimalista na moda",
       "position": 15,
       "volume": 110,
@@ -246,11 +298,27 @@
       "difficulty": 0
     },
     {
+      "keyword": "outfits con chaleco",
+      "position": 15,
+      "volume": 320,
+      "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-mujer/",
+      "title": "Outfit con chalecos mujer | Ideas para combinar con estilo",
+      "difficulty": 0
+    },
+    {
       "keyword": "moda urbana hombre",
       "position": 16,
       "volume": 140,
       "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
       "title": "Moda urbana hombre: guía 2025 para un estilo auténtico",
+      "difficulty": 0
+    },
+    {
+      "keyword": "outfit con chaleco hombre",
+      "position": 16,
+      "volume": 170,
+      "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-hombre/",
+      "title": "Outfit con chalecos hombre: ideas y combinaciones",
       "difficulty": 0
     },
     {
@@ -262,93 +330,98 @@
       "difficulty": 0
     },
     {
-      "keyword": "outfits hombre urbano",
+      "keyword": "outfits con chalecos",
       "position": 17,
-      "volume": 140,
-      "url": "https://youarenotaloneproject.com/blog/moda-urbana/moda-urbana-hombre/",
-      "title": "Moda urbana hombre: guía 2025 para un estilo auténtico",
+      "volume": 320,
+      "url": "https://youarenotaloneproject.com/blog/moda/outfit-con-chalecos-mujer/",
+      "title": "Outfit con chalecos mujer | Ideas para combinar con estilo",
       "difficulty": 0
     },
     {
-      "keyword": "looks de otoño 2025",
-      "position": 19,
-      "volume": 260,
-      "url": "https://youarenotaloneproject.com/blog/moda/look-otono-2025/",
-      "title": "Look Otoño 2025: Ideas y Tendencias para Vestir con Estilo",
-      "difficulty": 0
-    },
-    {
-      "keyword": "estilo minimalista en ropa",
-      "position": 21,
-      "volume": 260,
-      "url": "https://youarenotaloneproject.com/blog/moda/estilo-minimalista-ropa/",
-      "title": "Estilo Minimalista en Ropa: Guía Completa y Consejos 2025",
-      "difficulty": 0
+      "keyword": "not alone",
+      "position": 18,
+      "volume": 210,
+      "url": "https://youarenotaloneproject.com/",
+      "title": "You Are Not Alone",
+      "difficulty": 13
     }
   ],
   "next_blog_topics": [
     {
-      "keyword": "ropa ecológica mujer",
-      "volume": 260,
-      "difficulty": 0,
-      "cpc": 0.63,
-      "competition": "HIGH",
-      "opportunity": 2600.0,
-      "source_seed": "moda sostenible españa",
-      "source_type": "related",
-      "related_in_cluster": []
-    },
-    {
-      "keyword": "marcas de ropa sostenible baratas",
-      "volume": 90,
-      "difficulty": 0,
-      "cpc": 0.65,
-      "competition": "HIGH",
-      "opportunity": 900.0,
-      "source_seed": "moda sostenible españa",
-      "source_type": "related",
-      "related_in_cluster": []
-    },
-    {
-      "keyword": "ropa sostenible barcelona",
-      "volume": 70,
-      "difficulty": 0,
-      "cpc": 0.68,
-      "competition": "HIGH",
-      "opportunity": 700.0,
-      "source_seed": "moda sostenible españa",
-      "source_type": "related",
-      "related_in_cluster": [
-        "ropa sostenible mujer barata"
-      ]
-    },
-    {
-      "keyword": "moda sostenible mujer",
-      "volume": 50,
-      "difficulty": 1,
-      "cpc": 0.54,
-      "competition": "HIGH",
-      "opportunity": 250.0,
-      "source_seed": "moda sostenible españa",
-      "source_type": "related",
-      "related_in_cluster": [
-        "moda sostenible en españa",
-        "moda sostenible españa"
-      ]
-    },
-    {
-      "keyword": "marcas de moda sostenible",
+      "keyword": "camisetas humor",
       "volume": 110,
-      "difficulty": 13,
-      "cpc": 0.76,
-      "competition": "MEDIUM",
-      "opportunity": 78.6,
+      "difficulty": 0,
+      "cpc": 0.28,
+      "competition": "HIGH",
+      "opportunity": 1100.0,
+      "source_seed": "camisetas con frases motivadoras",
+      "source_type": "related",
+      "related_in_cluster": []
+    },
+    {
+      "keyword": "ropa sostenible mujer barata",
+      "volume": 50,
+      "difficulty": 0,
+      "cpc": 0.91,
+      "competition": "HIGH",
+      "opportunity": 500.0,
       "source_seed": "moda sostenible españa",
+      "source_type": "related",
+      "related_in_cluster": []
+    },
+    {
+      "keyword": "camisetas con frases motivadoras",
+      "volume": 50,
+      "difficulty": 0,
+      "cpc": 0.58,
+      "competition": "HIGH",
+      "opportunity": 500.0,
+      "intent": "",
+      "source_seed": "camisetas con frases motivadoras",
+      "related_in_cluster": []
+    },
+    {
+      "keyword": "frases para personalizar camisetas",
+      "volume": 50,
+      "difficulty": 0,
+      "cpc": 0.9,
+      "competition": "HIGH",
+      "opportunity": 500.0,
+      "source_seed": "camisetas con frases motivadoras",
       "source_type": "related",
       "related_in_cluster": []
     }
   ],
-  "recent_publications": [],
+  "recent_publications": [
+    {
+      "published_at": "2026-05-13T11:08:53",
+      "article_id": 1001398993270,
+      "title": "Ropa Sostenible para Mujer y Barata: Sí Existe (y Cómo Reconocerla)",
+      "handle": "ropa-sostenible-mujer-barata-guia",
+      "source_brief": "briefs/20260513_ropa_sostenible_mujer_barata.json"
+    },
+    {
+      "published_at": "2026-05-13T11:08:48",
+      "article_id": 1001398960502,
+      "title": "Frases para Personalizar Camisetas: 30 Ideas con Significado Real",
+      "handle": "frases-para-personalizar-camisetas",
+      "source_brief": "briefs/20260513_frases_para_personalizar_camisetas.json"
+    },
+    {
+      "published_at": "2026-05-13T11:08:44",
+      "article_id": 1001398927734,
+      "title": "Camisetas con Humor: Cuando una Frase Saca una Sonrisa y Salva un Día",
+      "handle": "camisetas-humor-salud-mental",
+      "source_brief": "briefs/20260513_camisetas_humor.json"
+    },
+    {
+      "published_at": "2026-05-13T11:08:39",
+      "article_id": 1001398894966,
+      "title": "Camisetas con Frases Motivadoras: Cuándo Funcionan y Cuándo no",
+      "handle": "camisetas-con-frases-motivadoras",
+      "source_brief": "briefs/20260513_camisetas_con_frases_motivadoras.json"
+    }
+  ],
   "rank_distribution": {
     "top_3": 0,
     "4_10": 7,
@@ -359,9 +432,9 @@
   "opportunity_by_volume_band": {
     "10k_plus": 0,
     "1k_10k": 0,
-    "100_1k": 4,
-    "50_100": 4,
-    "under_50": 3
+    "100_1k": 5,
+    "50_100": 6,
+    "under_50": 6
   },
   "audit_summary": {
     "audited_at": null,
@@ -396,7 +469,7 @@
       {
         "icon": "🆕",
         "label": "Blogs nuevos publicados",
-        "count": 0
+        "count": 4
       },
       {
         "icon": "❓",
@@ -416,8 +489,8 @@
     ]
   },
   "projections": {
-    "current_estimated_clicks_per_month": 83,
-    "opportunity_volume_per_month": 1060,
+    "current_estimated_clicks_per_month": 84,
+    "opportunity_volume_per_month": 1340,
     "assumptions": {
       "ticket_promedio_eur": 50.0,
       "conversion_rate": 0.02,
@@ -428,8 +501,8 @@
         "name": "Conservador",
         "target_position": 10,
         "timeframe": "6 meses",
-        "additional_clicks_per_month": 19,
-        "total_clicks_per_month": 102,
+        "additional_clicks_per_month": 24,
+        "total_clicks_per_month": 108,
         "estimated_sales_per_month": 2,
         "estimated_revenue_eur_per_month": 100
       },
@@ -437,8 +510,8 @@
         "name": "Realista",
         "target_position": 5,
         "timeframe": "6-12 meses",
-        "additional_clicks_per_month": 53,
-        "total_clicks_per_month": 136,
+        "additional_clicks_per_month": 67,
+        "total_clicks_per_month": 151,
         "estimated_sales_per_month": 3,
         "estimated_revenue_eur_per_month": 150
       },
@@ -446,11 +519,27 @@
         "name": "Optimista",
         "target_position": 3,
         "timeframe": "12-18 meses",
-        "additional_clicks_per_month": 106,
-        "total_clicks_per_month": 189,
+        "additional_clicks_per_month": 134,
+        "total_clicks_per_month": 218,
         "estimated_sales_per_month": 4,
         "estimated_revenue_eur_per_month": 200
       }
     ]
+  },
+  "layer1_technical": {
+    "schema": {
+      "ok": 11,
+      "wrong_type": 14,
+      "skipped": 2,
+      "pending_proposals": 0
+    },
+    "indexation": {
+      "status": "ok",
+      "urls_count": 7,
+      "by_verdict": {
+        "NEUTRAL": 5,
+        "PASS": 2
+      }
+    }
   }
 }
