@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T10:10:42+02:00",
+  "updated_at": "2026-05-17T10:58:53+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -47,24 +47,24 @@
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
         "gasto": 6.74,
-        "impressions": 1825,
+        "impressions": 1827,
         "clicks": 44,
         "purchases": 0,
         "cpa": 0.0,
-        "reach": 1595,
-        "frequency": 1.144201,
-        "ctr": 2.410959,
+        "reach": 1597,
+        "frequency": 1.14402,
+        "ctr": 2.40832,
         "cpm": 3.69,
         "currency": "COP"
       }
     ],
     "agregado_ytd": {
-      "impressions": 1825,
-      "reach": 1595,
+      "impressions": 1827,
+      "reach": 1597,
       "clicks": 44,
-      "ctr": 2.410958904109589,
+      "ctr": 2.40831964969896,
       "cpm": 3.69,
-      "frequency": 1.1442006269592477,
+      "frequency": 1.1440200375704446,
       "cpc": 0.1532
     },
     "currency_conversion": {
@@ -103,8 +103,8 @@
       "meta_gasto": 0.02,
       "meta_purchases": 0,
       "meta_clicks": 1,
-      "meta_impressions": 1,
-      "meta_reach": 1
+      "meta_impressions": 3,
+      "meta_reach": 3
     }
   },
   "seo": {
@@ -655,9 +655,9 @@
   "logros": {
     "hoy": {
       "alcance": [
-        "💜 Hoy 1 personas han visto un mensaje de que no están solas. Cada una cuenta.",
+        "💜 Hoy 3 personas han visto un mensaje de que no están solas. Cada una cuenta.",
         "🌱 Frecuencia 1,0x — seguimos abriendo puertas a personas nuevas.",
-        "🎯 CTR 100,00% — uno de cada 1 que ven el anuncio quiere saber más. Conexión auténtica.",
+        "🎯 CTR 33,33% — uno de cada 3 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 1 personas han querido entrar y leer hoy."
       ],
       "ventas": [],
@@ -671,9 +671,9 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Hoy 1 personas han visto un mensaje de que no están solas. Cada una cuenta.",
+        "💜 Hoy 3 personas han visto un mensaje de que no están solas. Cada una cuenta.",
         "🌱 Frecuencia 1,0x — seguimos abriendo puertas a personas nuevas.",
-        "🎯 CTR 100,00% — uno de cada 1 que ven el anuncio quiere saber más. Conexión auténtica.",
+        "🎯 CTR 33,33% — uno de cada 3 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 1 personas han querido entrar y leer hoy.",
         "📉 ROAS 0,0x hoy — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
         "💸 0 € en publicidad hoy — inversión cuidada.",
@@ -684,7 +684,7 @@
     },
     "semana": {
       "alcance": [
-        "💜 Esta semana hemos llegado a 1.596 personas en España — 1.596 corazones que recibieron el mensaje.",
+        "💜 Esta semana hemos llegado a 1.598 personas en España — 1.598 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 2,41% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 44 personas han querido entrar y leer esta semana."
@@ -700,7 +700,7 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Esta semana hemos llegado a 1.596 personas en España — 1.596 corazones que recibieron el mensaje.",
+        "💜 Esta semana hemos llegado a 1.598 personas en España — 1.598 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 2,41% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 44 personas han querido entrar y leer esta semana.",
@@ -713,7 +713,7 @@
     },
     "mes": {
       "alcance": [
-        "💜 Este mes hemos llegado a 1.596 personas en España — 1.596 corazones que recibieron el mensaje.",
+        "💜 Este mes hemos llegado a 1.598 personas en España — 1.598 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 2,41% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 44 personas han querido entrar y leer este mes."
@@ -729,7 +729,7 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Este mes hemos llegado a 1.596 personas en España — 1.596 corazones que recibieron el mensaje.",
+        "💜 Este mes hemos llegado a 1.598 personas en España — 1.598 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 2,41% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 44 personas han querido entrar y leer este mes.",
@@ -742,7 +742,7 @@
     },
     "ytd": {
       "alcance": [
-        "💜 Este año hemos llegado a 1.596 personas en España — 1.596 corazones que recibieron el mensaje.",
+        "💜 Este año hemos llegado a 1.598 personas en España — 1.598 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 2,41% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 44 personas han querido entrar y leer este año."
@@ -758,7 +758,7 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Este año hemos llegado a 1.596 personas en España — 1.596 corazones que recibieron el mensaje.",
+        "💜 Este año hemos llegado a 1.598 personas en España — 1.598 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 2,41% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 44 personas han querido entrar y leer este año.",
