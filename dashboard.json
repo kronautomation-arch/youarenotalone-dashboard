@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T10:59:38+02:00",
+  "updated_at": "2026-05-19T12:34:12+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -39,33 +39,33 @@
     "codigos_descuento": []
   },
   "meta": {
-    "gasto_total_ytd": 76.67,
+    "gasto_total_ytd": 82.03,
     "purchases_total_ytd": 0,
     "cpa": 0.0,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 76.67,
-        "impressions": 12903,
-        "clicks": 278,
+        "gasto": 82.03,
+        "impressions": 13305,
+        "clicks": 285,
         "purchases": 0,
         "cpa": 0.0,
-        "reach": 8443,
-        "frequency": 1.528248,
-        "ctr": 2.154538,
-        "cpm": 5.94,
+        "reach": 8606,
+        "frequency": 1.546014,
+        "ctr": 2.142052,
+        "cpm": 6.17,
         "currency": "COP"
       }
     ],
     "agregado_ytd": {
-      "impressions": 12903,
-      "reach": 8443,
-      "clicks": 278,
-      "ctr": 2.1545377044098273,
-      "cpm": 5.94,
-      "frequency": 1.5282482529906432,
-      "cpc": 0.2758
+      "impressions": 13305,
+      "reach": 8606,
+      "clicks": 285,
+      "ctr": 2.142051860202931,
+      "cpm": 6.17,
+      "frequency": 1.546014408552173,
+      "cpc": 0.2878
     },
     "currency_conversion": {
       "from": "COP",
@@ -124,11 +124,11 @@
       "descuentos": 0.0,
       "unidades": 0,
       "ordenes": 0,
-      "meta_gasto": 6.38,
+      "meta_gasto": 11.61,
       "meta_purchases": 0,
-      "meta_clicks": 6,
-      "meta_impressions": 591,
-      "meta_reach": 441
+      "meta_clicks": 13,
+      "meta_impressions": 993,
+      "meta_reach": 747
     }
   },
   "seo": {
@@ -679,15 +679,15 @@
   "logros": {
     "hoy": {
       "alcance": [
-        "💜 Hoy 441 personas han visto un mensaje de que no están solas. Cada una cuenta.",
+        "💜 Hoy hemos llegado a 747 personas en España — 747 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 1,02% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 6 personas han querido entrar y leer hoy."
+        "📊 CTR 1,31% — hay gente parándose a leer el mensaje. Buena señal.",
+        "🖱️ 13 personas han querido entrar y leer hoy."
       ],
       "ventas": [],
       "eficiencia": [
         "📉 ROAS 0,0x hoy — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 6 € en publicidad hoy — inversión cuidada."
+        "💸 12 € en publicidad hoy — inversión cuidada."
       ],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
@@ -695,12 +695,12 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Hoy 441 personas han visto un mensaje de que no están solas. Cada una cuenta.",
+        "💜 Hoy hemos llegado a 747 personas en España — 747 corazones que recibieron el mensaje.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 1,02% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 6 personas han querido entrar y leer hoy.",
+        "📊 CTR 1,31% — hay gente parándose a leer el mensaje. Buena señal.",
+        "🖱️ 13 personas han querido entrar y leer hoy.",
         "📉 ROAS 0,0x hoy — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 6 € en publicidad hoy — inversión cuidada.",
+        "💸 12 € en publicidad hoy — inversión cuidada.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
@@ -708,16 +708,16 @@
     },
     "semana": {
       "alcance": [
-        "💜 Esta semana hemos llegado a 3.512 personas en España — 3.512 corazones que recibieron el mensaje.",
-        "👁️ 5.283 impresiones esta semana — el mensaje circula.",
+        "💜 Esta semana hemos llegado a 3.818 personas en España — 3.818 corazones que recibieron el mensaje.",
+        "👁️ 5.685 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,5x — seguimos abriendo puertas a personas nuevas.",
-        "🎯 CTR 2,80% — uno de cada 35 que ven el anuncio quiere saber más. Conexión auténtica.",
-        "🖱️ 148 clics esta semana — 148 curiosos que dieron el paso."
+        "🎯 CTR 2,73% — uno de cada 36 que ven el anuncio quiere saber más. Conexión auténtica.",
+        "🖱️ 155 clics esta semana — 155 curiosos que dieron el paso."
       ],
       "ventas": [],
       "eficiencia": [
         "📉 ROAS 0,0x esta semana — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 40 € en publicidad esta semana — inversión cuidada."
+        "💸 45 € en publicidad esta semana — inversión cuidada."
       ],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
@@ -725,13 +725,13 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Esta semana hemos llegado a 3.512 personas en España — 3.512 corazones que recibieron el mensaje.",
-        "👁️ 5.283 impresiones esta semana — el mensaje circula.",
+        "💜 Esta semana hemos llegado a 3.818 personas en España — 3.818 corazones que recibieron el mensaje.",
+        "👁️ 5.685 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,5x — seguimos abriendo puertas a personas nuevas.",
-        "🎯 CTR 2,80% — uno de cada 35 que ven el anuncio quiere saber más. Conexión auténtica.",
-        "🖱️ 148 clics esta semana — 148 curiosos que dieron el paso.",
+        "🎯 CTR 2,73% — uno de cada 36 que ven el anuncio quiere saber más. Conexión auténtica.",
+        "🖱️ 155 clics esta semana — 155 curiosos que dieron el paso.",
         "📉 ROAS 0,0x esta semana — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 40 € en publicidad esta semana — inversión cuidada.",
+        "💸 45 € en publicidad esta semana — inversión cuidada.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
@@ -739,16 +739,16 @@
     },
     "mes": {
       "alcance": [
-        "💜 Este mes hemos llegado a 9.729 personas en España — 9.729 corazones que recibieron el mensaje.",
-        "👁️ 12.903 impresiones este mes — el mensaje circula.",
+        "💜 10.035 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
+        "👁️ 13.305 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 2,15% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 278 clics este mes — 278 curiosos que dieron el paso."
+        "📊 CTR 2,14% — hay gente parándose a leer el mensaje. Buena señal.",
+        "🖱️ 285 clics este mes — 285 curiosos que dieron el paso."
       ],
       "ventas": [],
       "eficiencia": [
         "📉 ROAS 0,0x este mes — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 75 € en publicidad este mes — inversión cuidada."
+        "💸 80 € en publicidad este mes — inversión cuidada."
       ],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
@@ -756,13 +756,13 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Este mes hemos llegado a 9.729 personas en España — 9.729 corazones que recibieron el mensaje.",
-        "👁️ 12.903 impresiones este mes — el mensaje circula.",
+        "💜 10.035 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
+        "👁️ 13.305 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 2,15% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 278 clics este mes — 278 curiosos que dieron el paso.",
+        "📊 CTR 2,14% — hay gente parándose a leer el mensaje. Buena señal.",
+        "🖱️ 285 clics este mes — 285 curiosos que dieron el paso.",
         "📉 ROAS 0,0x este mes — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 75 € en publicidad este mes — inversión cuidada.",
+        "💸 80 € en publicidad este mes — inversión cuidada.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
@@ -770,16 +770,16 @@
     },
     "ytd": {
       "alcance": [
-        "💜 Este año hemos llegado a 9.729 personas en España — 9.729 corazones que recibieron el mensaje.",
-        "👁️ 12.903 impresiones este año — el mensaje circula.",
+        "💜 10.035 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
+        "👁️ 13.305 impresiones este año — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 2,15% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 278 clics este año — 278 curiosos que dieron el paso."
+        "📊 CTR 2,14% — hay gente parándose a leer el mensaje. Buena señal.",
+        "🖱️ 285 clics este año — 285 curiosos que dieron el paso."
       ],
       "ventas": [],
       "eficiencia": [
         "📉 ROAS 0,0x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 75 € en publicidad este año — inversión cuidada."
+        "💸 80 € en publicidad este año — inversión cuidada."
       ],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
@@ -787,13 +787,13 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Este año hemos llegado a 9.729 personas en España — 9.729 corazones que recibieron el mensaje.",
-        "👁️ 12.903 impresiones este año — el mensaje circula.",
+        "💜 10.035 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
+        "👁️ 13.305 impresiones este año — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 2,15% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 278 clics este año — 278 curiosos que dieron el paso.",
+        "📊 CTR 2,14% — hay gente parándose a leer el mensaje. Buena señal.",
+        "🖱️ 285 clics este año — 285 curiosos que dieron el paso.",
         "📉 ROAS 0,0x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 75 € en publicidad este año — inversión cuidada.",
+        "💸 80 € en publicidad este año — inversión cuidada.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
