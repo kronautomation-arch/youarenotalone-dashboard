@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22T10:49:29+02:00",
+  "updated_at": "2026-05-22T12:18:43+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -39,32 +39,32 @@
     "codigos_descuento": []
   },
   "meta": {
-    "gasto_total_ytd": 118.4,
+    "gasto_total_ytd": 118.41,
     "purchases_total_ytd": 0,
     "cpa": 0.0,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 118.4,
-        "impressions": 20009,
+        "gasto": 118.41,
+        "impressions": 20011,
         "clicks": 357,
         "purchases": 0,
         "cpa": 0.0,
         "reach": 12970,
-        "frequency": 1.542714,
-        "ctr": 1.784197,
+        "frequency": 1.542868,
+        "ctr": 1.784019,
         "cpm": 5.92,
         "currency": "COP"
       }
     ],
     "agregado_ytd": {
-      "impressions": 20009,
+      "impressions": 20011,
       "reach": 12970,
       "clicks": 357,
-      "ctr": 1.7841971112999149,
+      "ctr": 1.784018789665684,
       "cpm": 5.92,
-      "frequency": 1.5427139552814186,
+      "frequency": 1.5428681572860448,
       "cpc": 0.3317
     },
     "currency_conversion": {
@@ -139,7 +139,7 @@
       "meta_gasto": 20.16,
       "meta_purchases": 0,
       "meta_clicks": 47,
-      "meta_impressions": 5131,
+      "meta_impressions": 5133,
       "meta_reach": 3609
     }
   },
@@ -707,7 +707,7 @@
     "semana": {
       "alcance": [
         "💜 Esta semana hemos llegado a 8.612 personas en España — 8.612 corazones que recibieron el mensaje.",
-        "👁️ 12.389 impresiones esta semana — el mensaje circula.",
+        "👁️ 12.391 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,83% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 227 clics esta semana — 227 curiosos que dieron el paso."
@@ -724,7 +724,7 @@
       ],
       "all": [
         "💜 Esta semana hemos llegado a 8.612 personas en España — 8.612 corazones que recibieron el mensaje.",
-        "👁️ 12.389 impresiones esta semana — el mensaje circula.",
+        "👁️ 12.391 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,83% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 227 clics esta semana — 227 curiosos que dieron el paso.",
@@ -738,7 +738,7 @@
     "mes": {
       "alcance": [
         "💜 14.829 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.009 impresiones este mes — el mensaje circula.",
+        "👁️ 20.011 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este mes — 357 curiosos que dieron el paso."
@@ -755,7 +755,7 @@
       ],
       "all": [
         "💜 14.829 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.009 impresiones este mes — el mensaje circula.",
+        "👁️ 20.011 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este mes — 357 curiosos que dieron el paso.",
@@ -769,7 +769,7 @@
     "ytd": {
       "alcance": [
         "💜 14.829 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.009 impresiones este año — el mensaje circula.",
+        "👁️ 20.011 impresiones este año — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este año — 357 curiosos que dieron el paso."
@@ -786,7 +786,7 @@
       ],
       "all": [
         "💜 14.829 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.009 impresiones este año — el mensaje circula.",
+        "👁️ 20.011 impresiones este año — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este año — 357 curiosos que dieron el paso.",
