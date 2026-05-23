@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22T23:11:09+02:00",
+  "updated_at": "2026-05-23T10:06:14+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -39,39 +39,39 @@
     "codigos_descuento": []
   },
   "meta": {
-    "gasto_total_ytd": 118.42,
+    "gasto_total_ytd": 118.43,
     "purchases_total_ytd": 0,
     "cpa": 0.0,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 118.42,
-        "impressions": 20013,
+        "gasto": 118.43,
+        "impressions": 20014,
         "clicks": 357,
         "purchases": 0,
         "cpa": 0.0,
         "reach": 12996,
-        "frequency": 1.539935,
-        "ctr": 1.783841,
+        "frequency": 1.540012,
+        "ctr": 1.783751,
         "cpm": 5.92,
         "currency": "COP"
       }
     ],
     "agregado_ytd": {
-      "impressions": 20013,
+      "impressions": 20014,
       "reach": 12996,
       "clicks": 357,
-      "ctr": 1.7838405036726128,
+      "ctr": 1.7837513740381734,
       "cpm": 5.92,
-      "frequency": 1.5399353647276084,
+      "frequency": 1.5400123114804556,
       "cpc": 0.3317
     },
     "currency_conversion": {
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.0002317,
+      "avg_rate": 0.00023172,
       "source": "fawazahmed0/exchange-api"
     }
   },
@@ -136,10 +136,10 @@
       "descuentos": 0.0,
       "unidades": 0,
       "ordenes": 0,
-      "meta_gasto": 20.17,
+      "meta_gasto": 20.18,
       "meta_purchases": 0,
       "meta_clicks": 47,
-      "meta_impressions": 5135,
+      "meta_impressions": 5136,
       "meta_reach": 3615
     }
   },
@@ -707,7 +707,7 @@
     "semana": {
       "alcance": [
         "💜 Esta semana hemos llegado a 8.618 personas en España — 8.618 corazones que recibieron el mensaje.",
-        "👁️ 12.393 impresiones esta semana — el mensaje circula.",
+        "👁️ 12.394 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,83% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 227 clics esta semana — 227 curiosos que dieron el paso."
@@ -724,7 +724,7 @@
       ],
       "all": [
         "💜 Esta semana hemos llegado a 8.618 personas en España — 8.618 corazones que recibieron el mensaje.",
-        "👁️ 12.393 impresiones esta semana — el mensaje circula.",
+        "👁️ 12.394 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,83% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 227 clics esta semana — 227 curiosos que dieron el paso.",
@@ -738,7 +738,7 @@
     "mes": {
       "alcance": [
         "💜 14.835 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.013 impresiones este mes — el mensaje circula.",
+        "👁️ 20.014 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este mes — 357 curiosos que dieron el paso."
@@ -755,7 +755,7 @@
       ],
       "all": [
         "💜 14.835 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.013 impresiones este mes — el mensaje circula.",
+        "👁️ 20.014 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este mes — 357 curiosos que dieron el paso.",
@@ -769,7 +769,7 @@
     "ytd": {
       "alcance": [
         "💜 14.835 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.013 impresiones este año — el mensaje circula.",
+        "👁️ 20.014 impresiones este año — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este año — 357 curiosos que dieron el paso."
@@ -786,7 +786,7 @@
       ],
       "all": [
         "💜 14.835 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 20.013 impresiones este año — el mensaje circula.",
+        "👁️ 20.014 impresiones este año — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "📊 CTR 1,78% — hay gente parándose a leer el mensaje. Buena señal.",
         "🖱️ 357 clics este año — 357 curiosos que dieron el paso.",
