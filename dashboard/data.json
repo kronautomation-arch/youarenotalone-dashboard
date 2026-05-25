@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T22:56:53+02:00",
+  "updated_at": "2026-05-25T11:49:27+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -39,14 +39,14 @@
     "codigos_descuento": []
   },
   "meta": {
-    "gasto_total_ytd": 118.45,
+    "gasto_total_ytd": 118.46,
     "purchases_total_ytd": 0,
     "cpa": 0.0,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 118.45,
+        "gasto": 118.46,
         "impressions": 20016,
         "clicks": 358,
         "purchases": 0,
@@ -71,7 +71,7 @@
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.00023174,
+      "avg_rate": 0.00023175,
       "source": "fawazahmed0/exchange-api"
     }
   },
@@ -705,31 +705,15 @@
       ]
     },
     "semana": {
-      "alcance": [
-        "💜 Esta semana hemos llegado a 8.621 personas en España — 8.621 corazones que recibieron el mensaje.",
-        "👁️ 12.396 impresiones esta semana — el mensaje circula.",
-        "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 1,84% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 228 clics esta semana — 228 curiosos que dieron el paso."
-      ],
+      "alcance": [],
       "ventas": [],
-      "eficiencia": [
-        "📉 ROAS 0,0x esta semana — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 81 € en publicidad esta semana — inversión cuidada."
-      ],
+      "eficiencia": [],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Esta semana hemos llegado a 8.621 personas en España — 8.621 corazones que recibieron el mensaje.",
-        "👁️ 12.396 impresiones esta semana — el mensaje circula.",
-        "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 1,84% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 228 clics esta semana — 228 curiosos que dieron el paso.",
-        "📉 ROAS 0,0x esta semana — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 81 € en publicidad esta semana — inversión cuidada.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
