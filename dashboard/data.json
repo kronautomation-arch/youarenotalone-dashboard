@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-30T16:30:04+02:00",
+  "updated_at": "2026-06-30T17:22:08+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -87,18 +87,18 @@
     ]
   },
   "meta": {
-    "gasto_total_ytd": 469.54,
+    "gasto_total_ytd": 469.55,
     "purchases_total_ytd": 2,
     "cpa": 234.77,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 469.54,
+        "gasto": 469.55,
         "impressions": 45397,
         "clicks": 1244,
         "purchases": 2,
-        "cpa": 469.54,
+        "cpa": 469.55,
         "reach": 27153,
         "frequency": 1.671896,
         "ctr": 2.740269,
