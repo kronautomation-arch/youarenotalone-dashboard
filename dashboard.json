@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T23:00:51+02:00",
+  "updated_at": "2026-07-06T11:56:17+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -87,22 +87,22 @@
     ]
   },
   "meta": {
-    "gasto_total_ytd": 470.88,
+    "gasto_total_ytd": 471.17,
     "purchases_total_ytd": 2,
-    "cpa": 235.44,
+    "cpa": 235.58,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 470.88,
+        "gasto": 471.17,
         "impressions": 45397,
         "clicks": 1244,
         "purchases": 2,
-        "cpa": 470.88,
+        "cpa": 471.17,
         "reach": 27153,
         "frequency": 1.671896,
         "ctr": 2.740269,
-        "cpm": 10.37,
+        "cpm": 10.38,
         "currency": "COP"
       }
     ],
@@ -111,15 +111,15 @@
       "reach": 27153,
       "clicks": 1244,
       "ctr": 2.740269180782871,
-      "cpm": 10.37,
+      "cpm": 10.38,
       "frequency": 1.6718962913858506,
-      "cpc": 0.3785
+      "cpc": 0.3788
     },
     "currency_conversion": {
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.00023521,
+      "avg_rate": 0.00023535,
       "source": "fawazahmed0/exchange-api"
     }
   },
@@ -876,32 +876,18 @@
       ]
     },
     "semana": {
-      "alcance": [
-        "💜 Esta semana hemos llegado a 1.100 personas en España — 1.100 corazones que recibieron el mensaje.",
-        "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 1,75% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 26 personas han querido entrar y leer esta semana."
-      ],
+      "alcance": [],
       "ventas": [
         "👑 La prenda más querida esta semana: «Camiseta You Are Not Alone C02» con 5 unidades. Esa frase está conectando."
       ],
-      "eficiencia": [
-        "📉 ROAS 0,0x esta semana — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 37 € en publicidad esta semana — inversión cuidada."
-      ],
+      "eficiencia": [],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Esta semana hemos llegado a 1.100 personas en España — 1.100 corazones que recibieron el mensaje.",
-        "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
-        "📊 CTR 1,75% — hay gente parándose a leer el mensaje. Buena señal.",
-        "🖱️ 26 personas han querido entrar y leer esta semana.",
         "👑 La prenda más querida esta semana: «Camiseta You Are Not Alone C02» con 5 unidades. Esa frase está conectando.",
-        "📉 ROAS 0,0x esta semana — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 37 € en publicidad esta semana — inversión cuidada.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
