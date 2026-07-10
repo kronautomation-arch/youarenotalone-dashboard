@@ -10,14 +10,6 @@
   <meta name="theme-color" content="#080c18" />
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="auth.js"></script>
-  <script>
-    // En localhost saltamos auth (modo desarrollo)
-    if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
-      requireAuth('youarenotalone');
-    }
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
