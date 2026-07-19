@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-19T11:01:38+02:00",
+  "updated_at": "2026-07-19T15:35:02+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
   "errors": {
     "shopify": null,
-    "meta": "Meta API 400 en act_26824778487134439/insights — OAuthException (code 2): Service temporarily unavailable [fbtrace_id=Aye9ResnxPaEtiv1EBBgaqT]",
+    "meta": null,
     "seo": null
   },
   "config": {
@@ -87,39 +87,132 @@
     ]
   },
   "meta": {
-    "gasto_total_ytd": 0,
-    "purchases_total_ytd": 0,
-    "cpa": 0,
-    "cuentas": [],
+    "gasto_total_ytd": 475.34,
+    "purchases_total_ytd": 2,
+    "cpa": 237.67,
+    "cuentas": [
+      {
+        "nombre": "Cuenta 01",
+        "account_id": "act_26824778487134439",
+        "gasto": 475.34,
+        "impressions": 45397,
+        "clicks": 1244,
+        "purchases": 2,
+        "cpa": 475.34,
+        "reach": 27153,
+        "frequency": 1.671896,
+        "ctr": 2.740269,
+        "cpm": 10.47,
+        "currency": "COP"
+      }
+    ],
     "agregado_ytd": {
-      "impressions": 0,
-      "reach": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "cpm": 0,
-      "frequency": 0,
-      "cpc": 0
+      "impressions": 45397,
+      "reach": 27153,
+      "clicks": 1244,
+      "ctr": 2.740269180782871,
+      "cpm": 10.47,
+      "frequency": 1.6718962913858506,
+      "cpc": 0.3821
     },
-    "currency_conversion": null
+    "currency_conversion": {
+      "from": "COP",
+      "to": "EUR",
+      "method": "daily_historical_rates",
+      "avg_rate": 0.00023744,
+      "source": "fawazahmed0/exchange-api"
+    }
   },
   "kpis_negocio": {
-    "roas_ytd": 0,
+    "roas_ytd": 0.38,
     "ticket_promedio": 61.16,
     "tasa_descuento": 0.1,
     "unidades_por_orden": 1.67
   },
   "daily": {
+    "2026-05-16": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 6.57,
+      "meta_purchases": 0,
+      "meta_clicks": 43,
+      "meta_impressions": 1826,
+      "meta_reach": 1597
+    },
+    "2026-05-17": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 28.75,
+      "meta_purchases": 0,
+      "meta_clicks": 87,
+      "meta_impressions": 5794,
+      "meta_reach": 4620
+    },
+    "2026-05-18": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 33.32,
+      "meta_purchases": 0,
+      "meta_clicks": 142,
+      "meta_impressions": 4693,
+      "meta_reach": 3071
+    },
+    "2026-05-19": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 27.33,
+      "meta_purchases": 0,
+      "meta_clicks": 38,
+      "meta_impressions": 2565,
+      "meta_reach": 1932
+    },
+    "2026-05-21": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 20.18,
+      "meta_purchases": 0,
+      "meta_clicks": 48,
+      "meta_impressions": 5138,
+      "meta_reach": 3618
+    },
+    "2026-05-25": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 8.62,
+      "meta_purchases": 0,
+      "meta_clicks": 64,
+      "meta_impressions": 1431,
+      "meta_reach": 1138
+    },
     "2026-05-26": {
       "ventas_brutas": 39.0,
       "ventas_netas": 39.09,
       "descuentos": 3.9,
       "unidades": 1,
       "ordenes": 1,
-      "meta_gasto": 0.0,
+      "meta_gasto": 69.82,
       "meta_purchases": 0,
-      "meta_clicks": 0,
-      "meta_impressions": 0,
-      "meta_reach": 0
+      "meta_clicks": 94,
+      "meta_impressions": 4858,
+      "meta_reach": 3356
     },
     "2026-05-27": {
       "ventas_brutas": 39.0,
@@ -127,11 +220,23 @@
       "descuentos": 3.9,
       "unidades": 1,
       "ordenes": 1,
-      "meta_gasto": 0.0,
+      "meta_gasto": 47.92,
+      "meta_purchases": 2,
+      "meta_clicks": 53,
+      "meta_impressions": 3506,
+      "meta_reach": 2484
+    },
+    "2026-05-28": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 31.6,
       "meta_purchases": 0,
-      "meta_clicks": 0,
-      "meta_impressions": 0,
-      "meta_reach": 0
+      "meta_clicks": 30,
+      "meta_impressions": 2283,
+      "meta_reach": 1811
     },
     "2026-05-31": {
       "ventas_brutas": 117.0,
@@ -144,6 +249,66 @@
       "meta_clicks": 0,
       "meta_impressions": 0,
       "meta_reach": 0
+    },
+    "2026-06-02": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 22.54,
+      "meta_purchases": 0,
+      "meta_clicks": 24,
+      "meta_impressions": 1032,
+      "meta_reach": 676
+    },
+    "2026-06-26": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 2.21,
+      "meta_purchases": 0,
+      "meta_clicks": 80,
+      "meta_impressions": 418,
+      "meta_reach": 314
+    },
+    "2026-06-27": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 64.58,
+      "meta_purchases": 0,
+      "meta_clicks": 440,
+      "meta_impressions": 4165,
+      "meta_reach": 3133
+    },
+    "2026-06-28": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 81.94,
+      "meta_purchases": 0,
+      "meta_clicks": 75,
+      "meta_impressions": 6203,
+      "meta_reach": 3831
+    },
+    "2026-06-29": {
+      "ventas_brutas": 0.0,
+      "ventas_netas": 0.0,
+      "descuentos": 0.0,
+      "unidades": 0,
+      "ordenes": 0,
+      "meta_gasto": 36.55,
+      "meta_purchases": 0,
+      "meta_clicks": 26,
+      "meta_impressions": 1485,
+      "meta_reach": 1100
     }
   },
   "seo": {
@@ -747,7 +912,13 @@
       ]
     },
     "ytd": {
-      "alcance": [],
+      "alcance": [
+        "💜 32.681 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
+        "👁️ 45.397 impresiones este año — el mensaje circula.",
+        "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
+        "🎯 CTR 2,74% — uno de cada 36 que ven el anuncio quiere saber más. Conexión auténtica.",
+        "🖱️ 1.244 clics este año — el mensaje resuena fuerte."
+      ],
       "ventas": [
         "🌟 5 prendas vendidas este año — 5 personas hoy llevan puesto un recordatorio de que importan.",
         "💶 183 € este año — cada euro sostiene la causa.",
@@ -756,19 +927,33 @@
         "👑 La prenda más querida este año: «Camiseta You Are Not Alone C02» con 5 unidades. Esa frase está conectando.",
         "🎟️ 10,0% en descuentos — equilibrio sano entre captación y margen."
       ],
-      "eficiencia": [],
+      "eficiencia": [
+        "📉 ROAS 0,4x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
+        "⚠️ CPA 161 € cerca o sobre el ticket 61 € — captar nuevos clientes está saliendo caro. Toca revisar.",
+        "🎯 Meta atribuye 2 compras este año; Shopify confirma 3 pedidos. Coincidencia del 67%, los anuncios traen ventas reales.",
+        "💸 482 € en Meta este año — sembrando audiencia."
+      ],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
+        "💜 32.681 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
+        "👁️ 45.397 impresiones este año — el mensaje circula.",
+        "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
+        "🎯 CTR 2,74% — uno de cada 36 que ven el anuncio quiere saber más. Conexión auténtica.",
+        "🖱️ 1.244 clics este año — el mensaje resuena fuerte.",
         "🌟 5 prendas vendidas este año — 5 personas hoy llevan puesto un recordatorio de que importan.",
         "💶 183 € este año — cada euro sostiene la causa.",
         "🛍️ 3 pedidos este año — 3 decisiones de unirse.",
         "🎫 Ticket 61 € — la comunidad apuesta fuerte por la marca.",
         "👑 La prenda más querida este año: «Camiseta You Are Not Alone C02» con 5 unidades. Esa frase está conectando.",
         "🎟️ 10,0% en descuentos — equilibrio sano entre captación y margen.",
+        "📉 ROAS 0,4x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
+        "⚠️ CPA 161 € cerca o sobre el ticket 61 € — captar nuevos clientes está saliendo caro. Toca revisar.",
+        "🎯 Meta atribuye 2 compras este año; Shopify confirma 3 pedidos. Coincidencia del 67%, los anuncios traen ventas reales.",
+        "💸 482 € en Meta este año — sembrando audiencia.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
