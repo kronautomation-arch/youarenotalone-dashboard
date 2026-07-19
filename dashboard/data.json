@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-19T09:59:30+02:00",
+  "updated_at": "2026-07-19T11:01:38+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
   "errors": {
     "shopify": null,
-    "meta": "Meta API 400 en act_26824778487134439/insights — OAuthException (code 2): Service temporarily unavailable [fbtrace_id=ARpkwK-ZXktm248KXGutOhW]",
+    "meta": "Meta API 400 en act_26824778487134439/insights — OAuthException (code 2): Service temporarily unavailable [fbtrace_id=Aye9ResnxPaEtiv1EBBgaqT]",
     "seo": null
   },
   "config": {
