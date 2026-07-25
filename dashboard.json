@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T23:03:48+02:00",
+  "updated_at": "2026-07-25T09:50:38+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -87,22 +87,22 @@
     ]
   },
   "meta": {
-    "gasto_total_ytd": 609.76,
+    "gasto_total_ytd": 610.19,
     "purchases_total_ytd": 2,
-    "cpa": 304.88,
+    "cpa": 305.1,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 609.76,
+        "gasto": 610.19,
         "impressions": 58406,
         "clicks": 1756,
         "purchases": 2,
-        "cpa": 609.76,
+        "cpa": 610.19,
         "reach": 34999,
         "frequency": 1.668791,
         "ctr": 3.00654,
-        "cpm": 10.44,
+        "cpm": 10.45,
         "currency": "COP"
       }
     ],
@@ -111,15 +111,15 @@
       "reach": 34999,
       "clicks": 1756,
       "ctr": 3.0065404239290485,
-      "cpm": 10.44,
+      "cpm": 10.45,
       "frequency": 1.668790536872482,
-      "cpc": 0.3472
+      "cpc": 0.3475
     },
     "currency_conversion": {
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.00023826,
+      "avg_rate": 0.00023843,
       "source": "fawazahmed0/exchange-api"
     }
   },
@@ -906,28 +906,18 @@
   },
   "logros": {
     "hoy": {
-      "alcance": [
-        "💜 Hoy 132 personas han visto un mensaje de que no están solas. Cada una cuenta.",
-        "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas."
-      ],
+      "alcance": [],
       "ventas": [
         "👑 La prenda más querida hoy: «Camiseta You Are Not Alone C02» con 5 unidades. Esa frase está conectando."
       ],
-      "eficiencia": [
-        "📉 ROAS 0,0x hoy — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 2 € en publicidad hoy — inversión cuidada."
-      ],
+      "eficiencia": [],
       "seo": [
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "💜 Hoy 132 personas han visto un mensaje de que no están solas. Cada una cuenta.",
-        "🌱 Frecuencia 1,1x — seguimos abriendo puertas a personas nuevas.",
         "👑 La prenda más querida hoy: «Camiseta You Are Not Alone C02» con 5 unidades. Esa frase está conectando.",
-        "📉 ROAS 0,0x hoy — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "💸 2 € en publicidad hoy — inversión cuidada.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
