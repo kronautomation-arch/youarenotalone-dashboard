@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25T15:45:20+02:00",
+  "updated_at": "2026-07-25T16:26:04+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -76,32 +76,32 @@
     ]
   },
   "meta": {
-    "gasto_total_ytd": 610.19,
+    "gasto_total_ytd": 610.2,
     "purchases_total_ytd": 2,
     "cpa": 305.1,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 610.19,
-        "impressions": 58406,
+        "gasto": 610.2,
+        "impressions": 58407,
         "clicks": 1756,
         "purchases": 2,
-        "cpa": 610.19,
+        "cpa": 610.2,
         "reach": 34999,
-        "frequency": 1.668791,
-        "ctr": 3.00654,
+        "frequency": 1.668819,
+        "ctr": 3.006489,
         "cpm": 10.45,
         "currency": "COP"
       }
     ],
     "agregado_ytd": {
-      "impressions": 58406,
+      "impressions": 58407,
       "reach": 34999,
       "clicks": 1756,
-      "ctr": 3.0065404239290485,
+      "ctr": 3.006488948242505,
       "cpm": 10.45,
-      "frequency": 1.668790536872482,
+      "frequency": 1.6688191091174034,
       "cpc": 0.3475
     },
     "currency_conversion": {
@@ -329,10 +329,10 @@
       "descuentos": 0.0,
       "unidades": 0,
       "ordenes": 0,
-      "meta_gasto": 67.64,
+      "meta_gasto": 67.65,
       "meta_purchases": 0,
       "meta_clicks": 142,
-      "meta_impressions": 4685,
+      "meta_impressions": 4686,
       "meta_reach": 3374
     },
     "2026-07-24": {
@@ -915,7 +915,7 @@
     "semana": {
       "alcance": [
         "💜 10.389 personas alcanzadas esta semana. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 13.009 impresiones esta semana — el mensaje circula.",
+        "👁️ 13.010 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "🎯 CTR 3,94% — uno de cada 25 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 512 clics esta semana — 512 curiosos que dieron el paso."
@@ -934,7 +934,7 @@
       ],
       "all": [
         "💜 10.389 personas alcanzadas esta semana. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 13.009 impresiones esta semana — el mensaje circula.",
+        "👁️ 13.010 impresiones esta semana — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "🎯 CTR 3,94% — uno de cada 25 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 512 clics esta semana — 512 curiosos que dieron el paso.",
@@ -949,7 +949,7 @@
     "mes": {
       "alcance": [
         "💜 10.389 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 13.009 impresiones este mes — el mensaje circula.",
+        "👁️ 13.010 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "🎯 CTR 3,94% — uno de cada 25 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 512 clics este mes — 512 curiosos que dieron el paso."
@@ -968,7 +968,7 @@
       ],
       "all": [
         "💜 10.389 personas alcanzadas este mes. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 13.009 impresiones este mes — el mensaje circula.",
+        "👁️ 13.010 impresiones este mes — el mensaje circula.",
         "🌱 Frecuencia 1,3x — seguimos abriendo puertas a personas nuevas.",
         "🎯 CTR 3,94% — uno de cada 25 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 512 clics este mes — 512 curiosos que dieron el paso.",
@@ -983,7 +983,7 @@
     "ytd": {
       "alcance": [
         "💜 43.070 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 58.406 veces hemos aparecido en pantalla este año. La conversación sobre salud mental no se detiene.",
+        "👁️ 58.407 veces hemos aparecido en pantalla este año. La conversación sobre salud mental no se detiene.",
         "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
         "🎯 CTR 3,01% — uno de cada 33 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 1.756 clics este año — el mensaje resuena fuerte."
@@ -1009,7 +1009,7 @@
       ],
       "all": [
         "💜 43.070 personas alcanzadas este año. Toda una ciudad pequeña sabiendo que hay alguien al otro lado.",
-        "👁️ 58.406 veces hemos aparecido en pantalla este año. La conversación sobre salud mental no se detiene.",
+        "👁️ 58.407 veces hemos aparecido en pantalla este año. La conversación sobre salud mental no se detiene.",
         "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
         "🎯 CTR 3,01% — uno de cada 33 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 1.756 clics este año — el mensaje resuena fuerte.",
