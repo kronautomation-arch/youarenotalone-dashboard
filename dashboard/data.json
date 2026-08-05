@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T23:12:11+02:00",
+  "updated_at": "2026-08-05T10:18:09+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -39,22 +39,22 @@
     "codigos_descuento": []
   },
   "meta": {
-    "gasto_total_ytd": 614.39,
+    "gasto_total_ytd": 614.75,
     "purchases_total_ytd": 2,
-    "cpa": 307.2,
+    "cpa": 307.37,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 614.39,
+        "gasto": 614.75,
         "impressions": 58407,
         "clicks": 1756,
         "purchases": 2,
-        "cpa": 614.39,
+        "cpa": 614.75,
         "reach": 34999,
         "frequency": 1.668819,
         "ctr": 3.006489,
-        "cpm": 10.52,
+        "cpm": 10.53,
         "currency": "COP"
       }
     ],
@@ -63,15 +63,15 @@
       "reach": 34999,
       "clicks": 1756,
       "ctr": 3.006488948242505,
-      "cpm": 10.52,
+      "cpm": 10.53,
       "frequency": 1.6688191091174034,
-      "cpc": 0.3499
+      "cpc": 0.3501
     },
     "currency_conversion": {
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.00024007,
+      "avg_rate": 0.00024021,
       "source": "fawazahmed0/exchange-api"
     }
   },
