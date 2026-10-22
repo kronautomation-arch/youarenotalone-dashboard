@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T01:02:07+02:00",
+  "updated_at": "2026-10-22T12:51:31+02:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -71,22 +71,22 @@
     "codigos_descuento": []
   },
   "meta": {
-    "gasto_total_ytd": 638.03,
+    "gasto_total_ytd": 638.28,
     "purchases_total_ytd": 2,
-    "cpa": 319.01,
+    "cpa": 319.14,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 638.03,
+        "gasto": 638.28,
         "impressions": 58407,
         "clicks": 1756,
         "purchases": 2,
-        "cpa": 638.03,
+        "cpa": 638.28,
         "reach": 34999,
         "frequency": 1.668819,
         "ctr": 3.006489,
-        "cpm": 10.92,
+        "cpm": 10.93,
         "currency": "COP"
       }
     ],
@@ -95,15 +95,15 @@
       "reach": 34999,
       "clicks": 1756,
       "ctr": 3.006488948242505,
-      "cpm": 10.92,
+      "cpm": 10.93,
       "frequency": 1.6688191091174034,
-      "cpc": 0.3633
+      "cpc": 0.3635
     },
     "currency_conversion": {
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.00024931,
+      "avg_rate": 0.00024941,
       "source": "fawazahmed0/exchange-api"
     }
   },
@@ -904,12 +904,7 @@
     "hoy": {
       "alcance": [],
       "ventas": [
-        "🌟 2 prendas vendidas hoy — 2 personas hoy llevan puesto un recordatorio de que importan.",
-        "💶 70 € hoy — cada euro sostiene la causa.",
-        "🛍️ 1 pedidos hoy — 1 decisiones de unirse.",
-        "🎫 Ticket 70 € — la comunidad apuesta fuerte por la marca.",
-        "👑 La prenda más querida hoy: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando.",
-        "🎟️ 14,6% en descuentos — equilibrio sano entre captación y margen."
+        "👑 La prenda más querida hoy: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando."
       ],
       "eficiencia": [],
       "seo": [
@@ -918,12 +913,7 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "🌟 2 prendas vendidas hoy — 2 personas hoy llevan puesto un recordatorio de que importan.",
-        "💶 70 € hoy — cada euro sostiene la causa.",
-        "🛍️ 1 pedidos hoy — 1 decisiones de unirse.",
-        "🎫 Ticket 70 € — la comunidad apuesta fuerte por la marca.",
         "👑 La prenda más querida hoy: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando.",
-        "🎟️ 14,6% en descuentos — equilibrio sano entre captación y margen.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
