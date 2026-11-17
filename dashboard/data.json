@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T03:47:41+01:00",
+  "updated_at": "2026-11-17T16:10:31+01:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -11,15 +11,15 @@
   "config": {
     "marca": "Youarenotalone",
     "pais": "España",
-    "ticket_promedio": 70.0,
+    "ticket_promedio": 104.5,
     "fuente_primaria": "shopify"
   },
   "shopify": {
-    "ventas_brutas_ytd": 81.99,
-    "ventas_netas_ytd": 70.0,
-    "descuentos_ytd": 11.99,
-    "unidades_ytd": 2,
-    "ordenes_ytd": 1,
+    "ventas_brutas_ytd": 228.99,
+    "ventas_netas_ytd": 209.0,
+    "descuentos_ytd": 19.99,
+    "unidades_ytd": 5,
+    "ordenes_ytd": 2,
     "canceladas": {
       "ordenes": 0,
       "monto": 0.0
@@ -35,37 +35,43 @@
     },
     "top_productos": [
       {
-        "nombre": "Camiseta Te vemos",
-        "unidades": 1,
-        "ventas": 39.0,
+        "nombre": "Camiseta Con uno basta",
+        "unidades": 2,
+        "ventas": 78.0,
         "vendor": "Mi tienda"
       },
       {
-        "nombre": "Camiseta Con uno basta",
+        "nombre": "Camiseta Te vemos",
+        "unidades": 2,
+        "ventas": 78.0,
+        "vendor": "Mi tienda"
+      },
+      {
+        "nombre": "Sudadera Sé +ONE",
         "unidades": 1,
-        "ventas": 39.0,
+        "ventas": 69.0,
         "vendor": "Mi tienda"
       }
     ],
     "top_skus": [
       {
-        "sku": "(sin SKU) - Beige / S",
-        "unidades": 1,
-        "ventas": 39.0,
-        "title": "Camiseta Te vemos"
+        "sku": "(sin SKU) - Beige / XS",
+        "unidades": 3,
+        "ventas": 147.0,
+        "title": "Camiseta Con uno basta"
       },
       {
-        "sku": "(sin SKU) - Beige / XS",
-        "unidades": 1,
-        "ventas": 39.0,
-        "title": "Camiseta Con uno basta"
+        "sku": "(sin SKU) - Beige / S",
+        "unidades": 2,
+        "ventas": 78.0,
+        "title": "Camiseta Te vemos"
       }
     ],
     "canales": [
       {
         "canal": "web",
-        "ordenes": 1,
-        "ventas_brutas": 81.99
+        "ordenes": 2,
+        "ventas_brutas": 228.99
       }
     ],
     "codigos_descuento": []
@@ -108,10 +114,10 @@
     }
   },
   "kpis_negocio": {
-    "roas_ytd": 0.11,
-    "ticket_promedio": 70.0,
-    "tasa_descuento": 0.1462,
-    "unidades_por_orden": 2.0
+    "roas_ytd": 0.33,
+    "ticket_promedio": 104.5,
+    "tasa_descuento": 0.0873,
+    "unidades_por_orden": 2.5
   },
   "daily": {
     "2026-05-16": {
@@ -347,6 +353,18 @@
       "ventas_netas": 70.0,
       "descuentos": 11.99,
       "unidades": 2,
+      "ordenes": 1,
+      "meta_gasto": 0.0,
+      "meta_purchases": 0,
+      "meta_clicks": 0,
+      "meta_impressions": 0,
+      "meta_reach": 0
+    },
+    "2026-11-17": {
+      "ventas_brutas": 147.0,
+      "ventas_netas": 139.0,
+      "descuentos": 8.0,
+      "unidades": 3,
       "ordenes": 1,
       "meta_gasto": 0.0,
       "meta_purchases": 0,
@@ -849,7 +867,7 @@
       "current_estimated_clicks_per_month": 84,
       "opportunity_volume_per_month": 1340,
       "assumptions": {
-        "ticket_promedio_eur": 70.0,
+        "ticket_promedio_eur": 104.5,
         "conversion_rate": 0.02,
         "ctr_table": "Google avg (pos 1=30%, pos 5=5%, pos 10=1.8%)"
       },
@@ -861,7 +879,7 @@
           "additional_clicks_per_month": 24,
           "total_clicks_per_month": 108,
           "estimated_sales_per_month": 2,
-          "estimated_revenue_eur_per_month": 140
+          "estimated_revenue_eur_per_month": 209
         },
         {
           "name": "Realista",
@@ -870,7 +888,7 @@
           "additional_clicks_per_month": 67,
           "total_clicks_per_month": 151,
           "estimated_sales_per_month": 3,
-          "estimated_revenue_eur_per_month": 210
+          "estimated_revenue_eur_per_month": 314
         },
         {
           "name": "Optimista",
@@ -879,7 +897,7 @@
           "additional_clicks_per_month": 134,
           "total_clicks_per_month": 218,
           "estimated_sales_per_month": 4,
-          "estimated_revenue_eur_per_month": 280
+          "estimated_revenue_eur_per_month": 418
         }
       ]
     },
@@ -904,7 +922,12 @@
     "hoy": {
       "alcance": [],
       "ventas": [
-        "👑 La prenda más querida hoy: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando."
+        "🌟 3 prendas vendidas hoy — 3 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 139 € hoy — cada euro sostiene la causa.",
+        "🛍️ 1 pedidos hoy — 1 decisiones de unirse.",
+        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida hoy: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen."
       ],
       "eficiencia": [],
       "seo": [
@@ -913,7 +936,12 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "👑 La prenda más querida hoy: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando.",
+        "🌟 3 prendas vendidas hoy — 3 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 139 € hoy — cada euro sostiene la causa.",
+        "🛍️ 1 pedidos hoy — 1 decisiones de unirse.",
+        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida hoy: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
@@ -922,7 +950,12 @@
     "semana": {
       "alcance": [],
       "ventas": [
-        "👑 La prenda más querida esta semana: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando."
+        "🌟 3 prendas vendidas esta semana — 3 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 139 € esta semana — cada euro sostiene la causa.",
+        "🛍️ 1 pedidos esta semana — 1 decisiones de unirse.",
+        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida esta semana: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen."
       ],
       "eficiencia": [],
       "seo": [
@@ -931,7 +964,12 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "👑 La prenda más querida esta semana: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando.",
+        "🌟 3 prendas vendidas esta semana — 3 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 139 € esta semana — cada euro sostiene la causa.",
+        "🛍️ 1 pedidos esta semana — 1 decisiones de unirse.",
+        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida esta semana: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
@@ -940,7 +978,12 @@
     "mes": {
       "alcance": [],
       "ventas": [
-        "👑 La prenda más querida este mes: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando."
+        "🌟 3 prendas vendidas este mes — 3 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 139 € este mes — cada euro sostiene la causa.",
+        "🛍️ 1 pedidos este mes — 1 decisiones de unirse.",
+        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida este mes: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen."
       ],
       "eficiencia": [],
       "seo": [
@@ -949,7 +992,12 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "👑 La prenda más querida este mes: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando.",
+        "🌟 3 prendas vendidas este mes — 3 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 139 € este mes — cada euro sostiene la causa.",
+        "🛍️ 1 pedidos este mes — 1 decisiones de unirse.",
+        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida este mes: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
@@ -964,17 +1012,17 @@
         "🖱️ 1.756 clics este año — el mensaje resuena fuerte."
       ],
       "ventas": [
-        "🌟 2 prendas vendidas este año — 2 personas hoy llevan puesto un recordatorio de que importan.",
-        "💶 70 € este año — cada euro sostiene la causa.",
-        "🛍️ 1 pedidos este año — 1 decisiones de unirse.",
-        "🎫 Ticket 70 € — la comunidad apuesta fuerte por la marca.",
-        "👑 La prenda más querida este año: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando.",
-        "🎟️ 14,6% en descuentos — equilibrio sano entre captación y margen."
+        "🌟 5 prendas vendidas este año — 5 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 209 € este año — cada euro sostiene la causa.",
+        "🛍️ 2 pedidos este año — 2 decisiones de unirse.",
+        "🎫 Ticket 104 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida este año: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 8,7% en descuentos — equilibrio sano entre captación y margen."
       ],
       "eficiencia": [
-        "📉 ROAS 0,1x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "⚠️ CPA 633 € cerca o sobre el ticket 70 € — captar nuevos clientes está saliendo caro. Toca revisar.",
-        "🎯 Meta atribuye 2 compras este año; Shopify confirma 1 pedidos. Coincidencia del 50%, los anuncios traen ventas reales.",
+        "📉 ROAS 0,3x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
+        "⚠️ CPA 317 € cerca o sobre el ticket 104 € — captar nuevos clientes está saliendo caro. Toca revisar.",
+        "🎯 Meta atribuye 2 compras este año; Shopify confirma 2 pedidos. Coincidencia del 100%, los anuncios traen ventas reales.",
         "💸 633 € en Meta este año — sembrando audiencia."
       ],
       "seo": [
@@ -988,15 +1036,15 @@
         "🌱 Frecuencia 1,4x — seguimos abriendo puertas a personas nuevas.",
         "🎯 CTR 3,01% — uno de cada 33 que ven el anuncio quiere saber más. Conexión auténtica.",
         "🖱️ 1.756 clics este año — el mensaje resuena fuerte.",
-        "🌟 2 prendas vendidas este año — 2 personas hoy llevan puesto un recordatorio de que importan.",
-        "💶 70 € este año — cada euro sostiene la causa.",
-        "🛍️ 1 pedidos este año — 1 decisiones de unirse.",
-        "🎫 Ticket 70 € — la comunidad apuesta fuerte por la marca.",
-        "👑 La prenda más querida este año: «Camiseta Te vemos» con 1 unidades. Esa frase está conectando.",
-        "🎟️ 14,6% en descuentos — equilibrio sano entre captación y margen.",
-        "📉 ROAS 0,1x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
-        "⚠️ CPA 633 € cerca o sobre el ticket 70 € — captar nuevos clientes está saliendo caro. Toca revisar.",
-        "🎯 Meta atribuye 2 compras este año; Shopify confirma 1 pedidos. Coincidencia del 50%, los anuncios traen ventas reales.",
+        "🌟 5 prendas vendidas este año — 5 personas hoy llevan puesto un recordatorio de que importan.",
+        "💶 209 € este año — cada euro sostiene la causa.",
+        "🛍️ 2 pedidos este año — 2 decisiones de unirse.",
+        "🎫 Ticket 104 € — la comunidad apuesta fuerte por la marca.",
+        "👑 La prenda más querida este año: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
+        "🎟️ 8,7% en descuentos — equilibrio sano entre captación y margen.",
+        "📉 ROAS 0,3x este año — invertimos más de lo que vuelve. Toca revisar creatividades o segmentación.",
+        "⚠️ CPA 317 € cerca o sobre el ticket 104 € — captar nuevos clientes está saliendo caro. Toca revisar.",
+        "🎯 Meta atribuye 2 compras este año; Shopify confirma 2 pedidos. Coincidencia del 100%, los anuncios traen ventas reales.",
         "💸 633 € en Meta este año — sembrando audiencia.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
