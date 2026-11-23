@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T00:56:38+01:00",
+  "updated_at": "2026-11-23T01:36:15+01:00",
   "currency": "EUR",
   "locale": "es-ES",
   "timezone": "Europe/Madrid",
@@ -77,18 +77,18 @@
     "codigos_descuento": []
   },
   "meta": {
-    "gasto_total_ytd": 644.72,
+    "gasto_total_ytd": 644.79,
     "purchases_total_ytd": 2,
-    "cpa": 322.36,
+    "cpa": 322.39,
     "cuentas": [
       {
         "nombre": "Cuenta 01",
         "account_id": "act_26824778487134439",
-        "gasto": 644.72,
+        "gasto": 644.79,
         "impressions": 58407,
         "clicks": 1756,
         "purchases": 2,
-        "cpa": 644.72,
+        "cpa": 644.79,
         "reach": 34999,
         "frequency": 1.668819,
         "ctr": 3.006489,
@@ -109,7 +109,7 @@
       "from": "COP",
       "to": "EUR",
       "method": "daily_historical_rates",
-      "avg_rate": 0.00025192,
+      "avg_rate": 0.00025195,
       "source": "fawazahmed0/exchange-api"
     }
   },
@@ -940,12 +940,7 @@
     "semana": {
       "alcance": [],
       "ventas": [
-        "🌟 3 prendas vendidas esta semana — 3 personas hoy llevan puesto un recordatorio de que importan.",
-        "💶 139 € esta semana — cada euro sostiene la causa.",
-        "🛍️ 1 pedidos esta semana — 1 decisiones de unirse.",
-        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
-        "👑 La prenda más querida esta semana: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
-        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen."
+        "👑 La prenda más querida esta semana: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando."
       ],
       "eficiencia": [],
       "seo": [
@@ -954,12 +949,7 @@
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
       ],
       "all": [
-        "🌟 3 prendas vendidas esta semana — 3 personas hoy llevan puesto un recordatorio de que importan.",
-        "💶 139 € esta semana — cada euro sostiene la causa.",
-        "🛍️ 1 pedidos esta semana — 1 decisiones de unirse.",
-        "🎫 Ticket 139 € — la comunidad apuesta fuerte por la marca.",
         "👑 La prenda más querida esta semana: «Camiseta Con uno basta» con 2 unidades. Esa frase está conectando.",
-        "🎟️ 5,4% en descuentos — equilibrio sano entre captación y margen.",
         "🔎 7 keywords en top 10 — la marca empieza a tener presencia orgánica seria.",
         "🌱 17 oportunidades de keywords detectadas con 1.340 búsquedas/mes sin atender. Cada una es un blog que conectaría con alguien que está buscando ayuda.",
         "🌐 ~84 visitas orgánicas/mes estimadas. Tráfico que no cuesta y ya está sembrado."
